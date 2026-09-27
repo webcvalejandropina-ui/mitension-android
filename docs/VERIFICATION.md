@@ -1,5 +1,7 @@
 # Verificación y límites
 
+Versión 1.0.2: compilación Debug, once tests JVM y lint sin errores tras ajustar la tipografía y los colores de las tomas. Revisión visual del resumen e histórico con tres lecturas sintéticas en claro y oscuro en el emulador Android TV API 34 ajustado a proporciones de teléfono. No se ha repetido en esta versión la batería instrumentada de la 1.0.1 ni se ha probado en teléfono físico. Ningún dato del usuario ni su captura se publica.
+
 Actualización de diseño 1.0.1: compilación Debug y lint sin errores; once tests JVM y seis tests instrumentados completados sin fallos. Se verifican los filtros con el mismo corte temporal que iPhone (incluido cambio de hora), métricas del resumen, navegación inferior y filtros médicos, además de las regresiones de almacenamiento y Excel existentes. Capturas del resumen claro/oscuro revisadas en el emulador Android TV API 34 con resolución 1080×2400 y densidad 420. No hay datos reales en las capturas. No se ha realizado una comparación píxel a píxel ni una prueba en teléfono real. Ver DESIGN_PARITY.md.
 
 Proyecto independiente: ninguna fuente ni configuración iOS se modifica para crear Android.

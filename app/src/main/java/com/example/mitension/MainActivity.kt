@@ -218,8 +218,11 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
                             periods.forEach { (period, rows) ->
                                 Card(Modifier.fillMaxWidth().padding(top = 12.dp), shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
                                     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                                        Text(tx(if(period == "morning") "Mañana" else "Noche"), color = if(period == "morning") Color(0xFFE99B32) else MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
-                                        rows.forEach { row -> ReadingCard(row, { pending = row }) }
+                                        Text(tx(if(period == "morning") "Mañana" else "Noche"), color = if(period == "morning") morningAccent() else MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
+                                        rows.forEachIndexed { index, row ->
+                                            if(index > 0) HorizontalDivider(Modifier.padding(vertical = 4.dp), color = MaterialTheme.colorScheme.outlineVariant)
+                                            ReadingCard(row, { pending = row })
+                                        }
                                     }
                                 }
                             }
@@ -273,7 +276,7 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
             listOf("morning", "evening").forEachIndexed { index, period ->
                 if(index > 0) HorizontalDivider()
                 Text(tx(if(index == 0) "Mañana" else "Noche"), fontWeight = FontWeight.SemiBold,
-                    color = if(index == 0) Color(0xFFE99B32) else MaterialTheme.colorScheme.secondary)
+                    color = if(index == 0) morningAccent() else MaterialTheme.colorScheme.secondary)
                 val rows = periods[period].orEmpty()
                 if(rows.isEmpty()) Text(tx("Sin tomas en este periodo"), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 rows.forEach { row ->
@@ -317,6 +320,9 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
     }
 }
 
+/** Amber needs a deeper shade on white and a brighter shade on dark cards. */
+@Composable private fun morningAccent() = if(isSystemInDarkTheme()) Color(0xFFFFB956) else Color(0xFFA65A00)
+
 @Composable private fun LocalNotice() {
     val context = LocalContext.current; val prefs = remember { context.getSharedPreferences("ui", Context.MODE_PRIVATE) }
     var visible by remember { mutableStateOf(!prefs.getBoolean("noticeDismissed", false)) }
@@ -344,8 +350,8 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
         else {
             Text(tx(if(reading.localTime().hour < 14) "Mañana" else "Noche") + " · " + reading.time(), color = Color.White.copy(alpha = .75f))
             // Keep the explanation and medical semantics shared with historical cards.
-            Text(tx("Sistólica (alta)") + ": " + tx(if(reading.systolic >= 135) "Sobre la referencia" else "Por debajo de la referencia"), color = Color(0xFFABA3FF), fontSize = 12.sp)
-            Text(tx("Diastólica (baja)") + ": " + tx(if(reading.diastolic >= 85) "Sobre la referencia" else "Por debajo de la referencia"), color = Color(0xFFABA3FF), fontSize = 12.sp)
+            Text(tx("Sistólica (alta)") + ": " + tx(if(reading.systolic >= 135) "Sobre la referencia" else "Por debajo de la referencia"), color = if(reading.systolic >= 135) Color(0xFFABA3FF) else Color(0xFFD8E8EC), fontSize = 12.sp)
+            Text(tx("Diastólica (baja)") + ": " + tx(if(reading.diastolic >= 85) "Sobre la referencia" else "Por debajo de la referencia"), color = if(reading.diastolic >= 85) Color(0xFFABA3FF) else Color(0xFFD8E8EC), fontSize = 12.sp)
             if(reading.systolic >= 180 || reading.diastolic >= 120) Text(tx("Medición muy elevada"), color = Color(0xFFFFB4AB))
         }
     }
@@ -370,20 +376,19 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
 @Composable private fun ReadingCard(row: Reading, delete: (() -> Unit)?) {
     val context = LocalContext.current
     var explanation by remember { mutableStateOf(false) }
-    val above = row.systolic >= 135 || row.diastolic >= 85
-    Column(verticalArrangement = Arrangement.spacedBy(13.dp)) {
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text(row.time(), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text("${row.systolic} / ${row.diastolic}", fontSize = 29.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
             Text("mmHg", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
-        row.pulse?.let { Text("$it ${tx("lpm")}", color = MaterialTheme.colorScheme.error) }
+        row.pulse?.let { Text("$it ${tx("lpm")}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
         if(row.note.isNotBlank()) Text(row.note, Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp)).background(MaterialTheme.colorScheme.background).padding(10.dp))
         HorizontalDivider()
-        Text(tx("Sistólica (alta)") + ": " + tx(if(row.systolic >= 135) "Sobre la referencia" else "Por debajo de la referencia"), color = if(above) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary)
-        Text(tx("Diastólica (baja)") + ": " + tx(if(row.diastolic >= 85) "Sobre la referencia" else "Por debajo de la referencia"), color = if(above) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary)
+        Text(tx("Sistólica (alta)") + ": " + tx(if(row.systolic >= 135) "Sobre la referencia" else "Por debajo de la referencia"), style = MaterialTheme.typography.bodySmall, color = if(row.systolic >= 135) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(tx("Diastólica (baja)") + ": " + tx(if(row.diastolic >= 85) "Sobre la referencia" else "Por debajo de la referencia"), style = MaterialTheme.typography.bodySmall, color = if(row.diastolic >= 85) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.onSurfaceVariant)
         if(row.systolic >= 180 || row.diastolic >= 120) Text(tx("Medición muy elevada"), color = MaterialTheme.colorScheme.error)
-        TextButton(onClick = { explanation = true }) { Text(tx("Qué significan estos valores")) }
+        TextButton(onClick = { explanation = true }, contentPadding = PaddingValues(horizontal = 0.dp, vertical = 4.dp)) { Text(tx("Qué significan estos valores"), style = MaterialTheme.typography.labelMedium) }
         row.medications.forEach { Text(it.description, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary) }
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(tx("Guardada en el iPhone"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)

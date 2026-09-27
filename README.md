@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/webcvalejandropina-ui/mitension-android/releases/download/v1.0.1-preview/Mi-Tension-Android-1.0.1-preview.apk"><strong>Descargar APK para Android</strong></a>
+  <a href="https://github.com/webcvalejandropina-ui/mitension-android/releases/download/v1.0.2-preview/Mi-Tension-Android-1.0.2-preview.apk"><strong>Descargar APK para Android</strong></a>
   · <a href="docs/INSTALLATION.md">Cómo instalar</a>
   · <a href="docs/PRIVACY.md">Privacidad</a>
 </p>
@@ -60,7 +60,7 @@ Los datos no se envían a servidores propios: la app no solicita permiso de Inte
 
 ## Descargar e instalar
 
-[Repositorio Android](https://github.com/webcvalejandropina-ui/mitension-android) · [APK y versión de prueba](https://github.com/webcvalejandropina-ui/mitension-android/releases/tag/v1.0.1-preview)
+[Repositorio Android](https://github.com/webcvalejandropina-ui/mitension-android) · [APK y versión de prueba](https://github.com/webcvalejandropina-ui/mitension-android/releases/tag/v1.0.2-preview)
 
 El APK publicado es instalable en Android 8 o posterior y está firmado para pruebas (Debug). No es una versión certificada para producción ni una publicación en Google Play. Consulta [instalación, firma y actualización](docs/INSTALLATION.md) y [pruebas realizadas y pendientes](docs/VERIFICATION.md).
 
