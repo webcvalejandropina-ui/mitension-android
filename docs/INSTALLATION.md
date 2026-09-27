@@ -2,11 +2,11 @@
 
 ## APK de prueba
 
-Descarga `Mi-Tension-Android-1.0.0-preview.apk` desde la sección Releases del repositorio. No requiere una cuenta ni conexión de la app a Internet. Requiere Android 8.0/API 26 o posterior.
+Descarga `Mi-Tension-Android-1.0.1-preview.apk` desde la sección Releases del repositorio. No requiere una cuenta ni conexión de la app a Internet. Requiere Android 8.0/API 26 o posterior.
 
-Abre el APK en el teléfono y, si Android lo solicita, autoriza la instalación desde esa fuente concreta. Puedes retirar ese permiso después. No desactives las protecciones generales del teléfono. También puedes instalar con `adb install -r Mi-Tension-Android-1.0.0-preview.apk` desde un ordenador con Android SDK y depuración autorizada.
+Abre el APK en el teléfono y, si Android lo solicita, autoriza la instalación desde esa fuente concreta. Puedes retirar ese permiso después. No desactives las protecciones generales del teléfono. También puedes instalar con `adb install -r Mi-Tension-Android-1.0.1-preview.apk` desde un ordenador con Android SDK y depuración autorizada.
 
-El archivo `SHA256SUMS.txt` permite comprobar la integridad del APK descargado. En macOS/Linux utiliza `shasum -a 256 Mi-Tension-Android-1.0.0-preview.apk` y compara el resultado. Esto detecta alteraciones del archivo; no sustituye una revisión de seguridad.
+El archivo `SHA256SUMS.txt` permite comprobar la integridad del APK descargado. En macOS/Linux utiliza `shasum -a 256 Mi-Tension-Android-1.0.1-preview.apk` y compara el resultado. Esto detecta alteraciones del archivo; no sustituye una revisión de seguridad.
 
 ## Uso inicial
 

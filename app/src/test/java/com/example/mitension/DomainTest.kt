@@ -10,6 +10,15 @@ import java.io.*
 
 /** Synthetic fixtures only. These tests do not touch phone files, permissions, or real alarms. */
 class DomainTest {
+    @Test fun rollingPeriodMatchesIPhoneAtCutoffAndAcrossDaylightSaving() {
+        val madrid = ZoneId.of("Europe/Madrid")
+        val now = ZonedDateTime.of(2026, 10, 27, 10, 30, 0, 0, madrid).toInstant()
+        val cutoff = now.atZone(madrid).minusDays(7).toInstant().toEpochMilli()
+        val included = Reading(systolic = 120, diastolic = 80, measuredAt = cutoff)
+        val excluded = included.copy(id = java.util.UUID.randomUUID().toString(), measuredAt = cutoff - 1)
+        assertEquals(listOf(included), readingsInLastDays(listOf(included, excluded), 7, now, madrid))
+        assertEquals(2, readingsInLastDays(listOf(included, excluded), null, now, madrid).size)
+    }
     private val zone = ZoneId.of("Europe/Madrid")
     private fun reading(hour: Int, minute: Int = 0) = Reading(systolic = 120, diastolic = 80,
         measuredAt = LocalDate.of(2026,9,27).atTime(hour,minute).atZone(zone).toInstant().toEpochMilli())

@@ -18,6 +18,10 @@ import androidx.compose.foundation.pager.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.*
@@ -28,6 +32,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.focus.focusProperties
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.geometry.Offset
@@ -75,10 +81,15 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
 /** Explicit light/dark palettes keep reference indicators readable in both themes. */
 @Composable fun MiTensionTheme(content: @Composable () -> Unit) {
     val dark = isSystemInDarkTheme()
-    val colors = if (dark) darkColorScheme(primary = Color(0xFF77D8C1), background = Color(0xFF0C1920),
-        surface = Color(0xFF142731), secondary = Color(0xFFCFB5FF))
-    else lightColorScheme(primary = Color(0xFF087F6D), background = Color(0xFFF3F8F7),
-        surface = Color.White, secondary = Color(0xFF715196))
+    // Match DashboardView.swift's adaptive iPhone palette, without Android dynamic recolouring.
+    val colors = if (dark) darkColorScheme(primary = Color(0xFF4FDEC8), background = Color(0xFF0C1218),
+        surface = Color(0xFF1C1C1E), onSurface = Color(0xFFF2F2F7), onBackground = Color(0xFFF2F2F7),
+        onSurfaceVariant = Color(0xFFB6B6BF), secondary = Color(0xFFABA3FF),
+        surfaceContainer = Color(0xFF1C1C1E), surfaceContainerHighest = Color(0xFF2C2C2E))
+    else lightColorScheme(primary = Color(0xFF0B796E), background = Color(0xFFF2F7F8),
+        surface = Color.White, onSurface = Color(0xFF071826), onBackground = Color(0xFF071826),
+        onSurfaceVariant = Color(0xFF62666C), secondary = Color(0xFF5856D6),
+        surfaceContainer = Color.White, surfaceContainerHighest = Color(0xFFE9EFF0))
     MaterialTheme(colorScheme = colors, content = content)
 }
 
@@ -87,6 +98,7 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
     val context = LocalContext.current
     val readings by context.store.readings.collectAsStateWithLifecycle()
     var route by rememberSaveable { mutableStateOf("home") }
+    var homeTitle by remember { mutableStateOf("Mis mediciones") }
     var error by remember { mutableStateOf<String?>(null) }
     val snack = remember { SnackbarHostState() }; val scope = rememberCoroutineScope()
     val launcher = androidx.activity.compose.rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
@@ -99,15 +111,15 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
             }.onFailure { error = context.t("No se pudo importar el Excel. Usa un archivo exportado por Mi Tensión con registros válidos.") }
         }
     }
-    fun share(excel: Boolean) { scope.launch {
+    fun share(excel: Boolean, selected: List<Reading> = readings) { scope.launch {
         runCatching {
             val file = withContext(Dispatchers.IO) {
                 val directory = File(context.cacheDir, "exports").apply { mkdirs() }
                 if (excel) File(directory, "Mi-Tension-${java.util.UUID.randomUUID()}.xlsx").apply {
-                    writeBytes(Excel.write(readings, listOf(context.t("Fecha y hora"), context.t("Momento"), context.t("Sistólica"),
+                    writeBytes(Excel.write(selected, listOf(context.t("Fecha y hora"), context.t("Momento"), context.t("Sistólica"),
                         context.t("Diastólica"), context.t("Pulso"), context.t("Notas"), "ID", context.t("Medicamentos de esta toma")),
                         periods = context.t("Mañana") to context.t("Noche")))
-                } else PdfReport.make(context, readings)
+                } else PdfReport.make(context, selected)
             }
             val uri = FileProvider.getUriForFile(context, "${context.packageName}.files", file)
             val intent = Intent(Intent.ACTION_SEND).setType(if (excel) "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" else "application/pdf")
@@ -117,21 +129,21 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
         }.onFailure { error = context.t("No se pudo exportar el archivo.") }
     } }
     val title = when(route) { "add" -> "Guardar nueva toma"; "more" -> "Cuida tu rutina"; "guide" -> "Guía y privacidad"
-        "reminders" -> "Alertas"; "import" -> "Importar registros de Excel"; else -> "Mi Tensión" }
+        "reminders" -> "Alertas"; "import" -> "Importar registros de Excel"; else -> homeTitle }
     Scaffold(topBar = { TopAppBar(title = { Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
         if (route == "home") Image(painterResource(R.drawable.pineapple_mark), null, Modifier.size(36.dp))
-        Text(tx(title), style = MaterialTheme.typography.titleLarge)
+        Text(tx(title), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
     } }, navigationIcon = { if(route != "home") IconButton(onClick = { route = "home" }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, tx("Cerrar")) } },
         actions = { if(route == "home") { IconButton(onClick = { route = "reminders" }) { Icon(Icons.Default.Notifications, tx("Alertas")) }
             IconButton(onClick = { route = "more" }) { Icon(Icons.Default.MoreVert, tx("Más")) } } }) },
         snackbarHost = { SnackbarHost(snack) }, containerColor = MaterialTheme.colorScheme.background) { padding ->
         Box(Modifier.padding(padding).fillMaxSize()) {
             when(route) {
-                "home" -> Home(readings, { route = "add" }, { share(false) }, {
-                    runCatching { ReportPrinter.print(context, readings) }.onFailure { error = context.t("No se pudo exportar el archivo.") }
+                "home" -> Home(readings, { route = "add" }, { share(false, it) }, { selected ->
+                    runCatching { ReportPrinter.print(context, selected) }.onFailure { error = context.t("No se pudo exportar el archivo.") }
                 }, { reading ->
                     runCatching { context.store.delete(reading.id); Reminders.reconcile(context) }.onFailure { error = context.t("No se pudo guardar la toma en este iPhone. Inténtalo de nuevo.") }
-                })
+                }, { homeTitle = it })
                 "add" -> AddReading { rows ->
                     try { context.store.add(rows); Reminders.reconcile(context); route = "home"; null }
                     catch (e: Exception) { context.t("No se pudo guardar la toma en este iPhone. Inténtalo de nuevo.") }
@@ -158,54 +170,94 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
 }
 
 @Composable private fun Tool(title: String, icon: androidx.compose.ui.graphics.vector.ImageVector, action: () -> Unit) {
-    FilledTonalButton(action, Modifier.fillMaxWidth().heightIn(min = 58.dp), shape = RoundedCornerShape(18.dp)) {
-        Icon(icon, null); Spacer(Modifier.width(12.dp)); Text(tx(title))
+    Card(onClick = action, modifier = Modifier.fillMaxWidth().heightIn(min = 64.dp), shape = RoundedCornerShape(18.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
+        Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically) {
+            Icon(icon, null, tint = MaterialTheme.colorScheme.primary); Spacer(Modifier.width(12.dp)); Text(tx(title), fontWeight = FontWeight.SemiBold)
+        }
     }
 }
 
 /** Swipe navigation is native pager state; menu taps and swipes share the same selected page. */
-@Composable private fun Home(readings: List<Reading>, add: () -> Unit, share: () -> Unit, print: () -> Unit, delete: (Reading) -> Unit) {
+@Composable private fun Home(readings: List<Reading>, add: () -> Unit, share: (List<Reading>) -> Unit, print: (List<Reading>) -> Unit, delete: (Reading) -> Unit, title: (String) -> Unit) {
     val clock = LocalClockVersion.current
     val days = remember(readings, clock) { grouped(readings) }
     val pager = rememberPagerState { 4 }; val scope = rememberCoroutineScope()
+    val layoutDirection = LocalLayoutDirection.current
     var pending by remember { mutableStateOf<Reading?>(null) }
+    var historyDays by rememberSaveable { mutableStateOf<Int?>(7) }
+    var medicalDays by rememberSaveable { mutableStateOf<Int?>(30) }
+    LaunchedEffect(pager.currentPage) { title(listOf("Mis mediciones", "Histórico", "Gráficas", "Vista médica")[pager.currentPage]) }
     Column {
-        ScrollableTabRow(pager.currentPage, edgePadding = 8.dp) {
-            listOf("Resumen", "Histórico", "Gráficas", "Médico").forEachIndexed { i, title ->
-                Tab(selected = pager.currentPage == i, onClick = { scope.launch { pager.animateScrollToPage(i) } }, text = { Text(tx(title)) })
-            }
-        }
         HorizontalPager(pager, Modifier.weight(1f)) { page ->
-            LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+            val selectedDays = if(page == 3) medicalDays else historyDays
+            val visible = readingsInLastDays(readings, if(page == 2) null else selectedDays)
+            val visibleGroups = grouped(visible)
+            LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(horizontal = 16.dp, vertical = 18.dp), verticalArrangement = Arrangement.spacedBy(18.dp)) {
                 if(page == 0) {
                     item { LocalNotice() }
-                    readings.firstOrNull()?.let { last -> item { ReadingCard(last, null) } }
+                    item { LatestReading(readings.firstOrNull()) }
+                    item { WeeklySummary(readings) }
                     item { Text(tx("Registro de tomas"), style = MaterialTheme.typography.titleLarge) }
                 }
                 if(page == 2) item { Chart(readings) }
                 else {
-                    if(page == 3) item { Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        Button(share, Modifier.fillMaxWidth()) { Text(tx("Compartir o imprimir")) }
-                        OutlinedButton(print, Modifier.fillMaxWidth()) { Icon(Icons.Default.Info, null); Spacer(Modifier.width(8.dp)); Text(tx("Imprimir")) }
+                    item { PeriodPicker(if(page == 3) listOf(30, 90, null) else listOf(7, 30, null), selectedDays) {
+                        if(page == 3) medicalDays = it else historyDays = it
                     } }
-                    if(readings.isEmpty()) item { Text(tx("Todavía no hay tomas")) }
-                    days.forEach { (day, periods) ->
+                    if(page == 3) item { Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                        ReportSummary(visible)
+                        OutlinedButton({ share(visible) }, Modifier.fillMaxWidth(), enabled = visible.isNotEmpty(), shape = RoundedCornerShape(16.dp)) { Text(tx("Compartir o imprimir")) }
+                        OutlinedButton({ print(visible) }, Modifier.fillMaxWidth(), enabled = visible.isNotEmpty(), shape = RoundedCornerShape(16.dp)) { Text(tx("Imprimir")) }
+                    } }
+                    if(visible.isEmpty()) item { Text(tx("Todavía no hay tomas")) }
+                    visibleGroups.forEach { (day, periods) ->
                         item(key = day.toString()) {
+                            if(page == 3) MedicalDay(day, periods) else {
                             Text(day.title(), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                             periods.forEach { (period, rows) ->
-                                Card(Modifier.fillMaxWidth().padding(top = 12.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
+                                Card(Modifier.fillMaxWidth().padding(top = 12.dp), shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
                                     Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                                        Text(tx(if(period == "morning") "Mañana" else "Noche"), color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
+                                        Text(tx(if(period == "morning") "Mañana" else "Noche"), color = if(period == "morning") Color(0xFFE99B32) else MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
                                         rows.forEach { row -> ReadingCard(row, { pending = row }) }
                                     }
                                 }
+                            }
                             }
                         }
                     }
                 }
             }
         }
-        if(pager.currentPage == 0) Button(add, Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 18.dp).heightIn(min = 54.dp)) { Text(tx("Guardar nueva toma")) }
+        if(pager.currentPage == 0) Button(add, Modifier.fillMaxWidth().padding(horizontal = 16.dp).padding(top = 8.dp, bottom = 20.dp).heightIn(min = 54.dp),
+            shape = RoundedCornerShape(16.dp), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF071826), contentColor = Color.White)) {
+            Icon(Icons.Default.AddCircle, null); Spacer(Modifier.width(8.dp)); Text(tx("Guardar nueva toma"), fontWeight = FontWeight.SemiBold)
+        }
+        // The bottom menu and swipe pager are one state, as on iPhone.
+        Row(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surface)
+            .pointerInput(pager, layoutDirection) {
+                var distance = 0f
+                detectHorizontalDragGestures(onDragStart = { distance = 0f }, onHorizontalDrag = { change, delta ->
+                    distance += delta; change.consume()
+                }, onDragEnd = {
+                    if(kotlin.math.abs(distance) > 35.dp.toPx()) {
+                        val direction = (if(distance < 0) 1 else -1) * (if(layoutDirection == LayoutDirection.Rtl) -1 else 1)
+                        scope.launch { pager.animateScrollToPage((pager.currentPage + direction).coerceIn(0, 3)) }
+                    }
+                })
+            }.padding(horizontal = 16.dp, vertical = 8.dp)) {
+            val icons = listOf(Icons.Default.Home, Icons.Default.DateRange, Icons.Default.Info, Icons.Default.List)
+            listOf("Resumen", "Histórico", "Gráficas", "Médico").forEachIndexed { index, label ->
+                val selected = pager.currentPage == index
+                Column(Modifier.weight(1f).clip(RoundedCornerShape(18.dp))
+                    .background(if(selected) MaterialTheme.colorScheme.primary.copy(alpha = .12f) else Color.Transparent)
+                    .selectable(selected, onClick = { scope.launch { pager.animateScrollToPage(index) } })
+                    .padding(vertical = 10.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(5.dp)) {
+                    Icon(icons[index], null, Modifier.size(19.dp), tint = if(selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(tx(label), fontSize = 11.sp, fontWeight = FontWeight.SemiBold, color = if(selected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
+        }
     }
     pending?.let { row -> AlertDialog(onDismissRequest = { pending = null }, title = { Text(tx("Eliminar toma")) },
         text = { Text(tx("La toma se borrará del almacenamiento local del iPhone.")) },
@@ -213,13 +265,104 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
         dismissButton = { TextButton(onClick = { pending = null }) { Text(tx("Cancelar")) } }) }
 }
 
+/** Compact day/period report mirrors iPhone's doctor view, rather than oversized editable cards. */
+@Composable private fun MedicalDay(day: LocalDate, periods: Map<String, List<Reading>>) {
+    Card(Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Text(day.title(), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+            listOf("morning", "evening").forEachIndexed { index, period ->
+                if(index > 0) HorizontalDivider()
+                Text(tx(if(index == 0) "Mañana" else "Noche"), fontWeight = FontWeight.SemiBold,
+                    color = if(index == 0) Color(0xFFE99B32) else MaterialTheme.colorScheme.secondary)
+                val rows = periods[period].orEmpty()
+                if(rows.isEmpty()) Text(tx("Sin tomas en este periodo"), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                rows.forEach { row ->
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                        Text(row.time(), style = MaterialTheme.typography.bodySmall)
+                        Text("${row.systolic} / ${row.diastolic} mmHg", fontWeight = FontWeight.Bold)
+                    }
+                    row.pulse?.let { Text("$it ${tx("lpm")}", style = MaterialTheme.typography.bodySmall) }
+                    if(row.note.isNotBlank()) Text(row.note, style = MaterialTheme.typography.bodySmall)
+                    row.medications.forEach { Text(it.description, style = MaterialTheme.typography.bodySmall) }
+                }
+            }
+        }
+    }
+}
+
+/** Segmented period selection mirrors the iPhone filters; export uses precisely this selection. */
+@Composable private fun PeriodPicker(options: List<Int?>, selected: Int?, change: (Int?) -> Unit) {
+    Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(MaterialTheme.colorScheme.surfaceContainerHighest).padding(4.dp)) {
+        options.forEach { days ->
+            val label = when(days) { 7 -> "7 días"; 30 -> "30 días"; 90 -> "90 días"; else -> "Todo" }
+            Text(tx(label), Modifier.weight(1f).clip(RoundedCornerShape(9.dp))
+                .background(if(days == selected) MaterialTheme.colorScheme.surface else Color.Transparent)
+                .selectable(days == selected, onClick = { change(days) }).padding(vertical = 10.dp),
+                textAlign = androidx.compose.ui.text.style.TextAlign.Center, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+        }
+    }
+}
+
+@Composable private fun ReportSummary(readings: List<Reading>) {
+    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        listOf("Mediciones" to readings.size.toString(), "Promedio" to if(readings.isEmpty()) "— / —" else
+            "${readings.sumOf { it.systolic } / readings.size} / ${readings.sumOf { it.diastolic } / readings.size}").forEach { (label, value) ->
+            Card(Modifier.weight(1f), shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
+                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(tx(label), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(value, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                }
+            }
+        }
+    }
+}
+
 @Composable private fun LocalNotice() {
     val context = LocalContext.current; val prefs = remember { context.getSharedPreferences("ui", Context.MODE_PRIVATE) }
     var visible by remember { mutableStateOf(!prefs.getBoolean("noticeDismissed", false)) }
-    if(visible) Card {
+    if(visible) Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primary.copy(alpha = .09f))) {
         Row(Modifier.padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(tx("Guardado en este iPhone"), Modifier.weight(1f))
             IconButton(onClick = { prefs.edit().putBoolean("noticeDismissed", true).apply(); visible = false }) { Icon(Icons.Default.Close, tx("Cerrar")) }
+        }
+    }
+}
+
+/** Same fixed ink/aqua hero and typography hierarchy as the iPhone last-reading card. */
+@Composable private fun LatestReading(reading: Reading?) {
+    Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(24.dp))
+        .background(Brush.linearGradient(listOf(Color(0xFF071826), Color(0xFF0C3441)))).padding(20.dp),
+        verticalArrangement = Arrangement.spacedBy(15.dp)) {
+        Text(tx("ÚLTIMA TOMA"), fontSize = 12.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.1.sp, color = Color.White.copy(alpha = .68f))
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(7.dp)) {
+            Text(reading?.systolic?.toString() ?: "—", fontSize = 48.sp, fontWeight = FontWeight.Bold, color = Color.White)
+            Text("/", fontSize = 28.sp, color = Color(0xFF37D6C0))
+            Text(reading?.diastolic?.toString() ?: "—", fontSize = 48.sp, fontWeight = FontWeight.Bold, color = Color.White)
+            Text("mmHg", fontSize = 12.sp, color = Color.White.copy(alpha = .72f))
+        }
+        if(reading == null) Text(tx("Pulsa “Guardar nueva toma” para empezar."), color = Color.White.copy(alpha = .75f))
+        else {
+            Text(tx(if(reading.localTime().hour < 14) "Mañana" else "Noche") + " · " + reading.time(), color = Color.White.copy(alpha = .75f))
+            // Keep the explanation and medical semantics shared with historical cards.
+            Text(tx("Sistólica (alta)") + ": " + tx(if(reading.systolic >= 135) "Sobre la referencia" else "Por debajo de la referencia"), color = Color(0xFFABA3FF), fontSize = 12.sp)
+            Text(tx("Diastólica (baja)") + ": " + tx(if(reading.diastolic >= 85) "Sobre la referencia" else "Por debajo de la referencia"), color = Color(0xFFABA3FF), fontSize = 12.sp)
+            if(reading.systolic >= 180 || reading.diastolic >= 120) Text(tx("Medición muy elevada"), color = Color(0xFFFFB4AB))
+        }
+    }
+}
+
+@Composable private fun WeeklySummary(readings: List<Reading>) {
+    val week = readingsInLastDays(readings, 7)
+    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+        listOf("MEDIA 7 DÍAS" to if(week.isEmpty()) "— / —" else "${week.sumOf { it.systolic } / week.size} / ${week.sumOf { it.diastolic } / week.size}",
+            "ESTA SEMANA" to week.size.toString()).forEachIndexed { index, (label, value) ->
+            Card(Modifier.weight(1f), shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
+                Column(Modifier.padding(15.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(tx(label), fontSize = 10.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(value, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                    Text(if(index == 0) "mmHg" else tx("tomas"), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                }
+            }
         }
     }
 }
@@ -228,19 +371,25 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
     val context = LocalContext.current
     var explanation by remember { mutableStateOf(false) }
     val above = row.systolic >= 135 || row.diastolic >= 85
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+    Column(verticalArrangement = Arrangement.spacedBy(13.dp)) {
+        Text(row.time(), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text("${row.systolic} / ${row.diastolic}", style = MaterialTheme.typography.headlineMedium, modifier = Modifier.weight(1f))
-            Text("mmHg"); if(delete != null) IconButton(delete) { Icon(Icons.Default.Delete, tx("Eliminar toma")) }
+            Text("${row.systolic} / ${row.diastolic}", fontSize = 29.sp, fontWeight = FontWeight.Bold, modifier = Modifier.weight(1f))
+            Text("mmHg", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
-        Text("${row.time()} · ${row.localTime().toLocalDate()}" + (row.pulse?.let { " · $it ${tx("lpm")}" } ?: ""))
+        row.pulse?.let { Text("$it ${tx("lpm")}", color = MaterialTheme.colorScheme.error) }
+        if(row.note.isNotBlank()) Text(row.note, Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp)).background(MaterialTheme.colorScheme.background).padding(10.dp))
+        HorizontalDivider()
         Text(tx("Sistólica (alta)") + ": " + tx(if(row.systolic >= 135) "Sobre la referencia" else "Por debajo de la referencia"), color = if(above) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary)
         Text(tx("Diastólica (baja)") + ": " + tx(if(row.diastolic >= 85) "Sobre la referencia" else "Por debajo de la referencia"), color = if(above) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary)
         if(row.systolic >= 180 || row.diastolic >= 120) Text(tx("Medición muy elevada"), color = MaterialTheme.colorScheme.error)
         TextButton(onClick = { explanation = true }) { Text(tx("Qué significan estos valores")) }
-        if(row.note.isNotBlank()) Text(row.note)
-        row.medications.forEach { Text(it.description, style = MaterialTheme.typography.bodyMedium) }
-        Text("ID ${row.id.take(6)}", style = MaterialTheme.typography.labelSmall)
+        row.medications.forEach { Text(it.description, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary) }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(tx("Guardada en el iPhone"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
+            Spacer(Modifier.width(6.dp)); Text("ID ${row.id.take(6)}", style = MaterialTheme.typography.labelSmall, modifier = Modifier.weight(1f))
+            if(delete != null) IconButton(delete) { Icon(Icons.Default.Delete, tx("Eliminar toma"), tint = MaterialTheme.colorScheme.error) }
+        }
     }
     if(explanation) AlertDialog(onDismissRequest = { explanation = false }, title = { Text(tx("Qué significan estos valores")) },
         text = { Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {

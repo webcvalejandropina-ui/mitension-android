@@ -29,6 +29,14 @@ fun Reading.canonical() = copy(id = id.lowercase(java.util.Locale.ROOT), medicat
     it.copy(id = it.id.lowercase(java.util.Locale.ROOT))
 })
 
+/** Same rolling calendar-day cutoff as iPhone, preserving local time across daylight-saving changes. */
+fun readingsInLastDays(readings: List<Reading>, days: Int?, now: Instant = Instant.now(), zone: ZoneId = ZoneId.systemDefault()): List<Reading> {
+    if(days == null) return readings
+    require(days > 0)
+    val cutoff = now.atZone(zone).minusDays(days.toLong()).toInstant().toEpochMilli()
+    return readings.filter { it.measuredAt >= cutoff }
+}
+
 /** Pure grouping shared by history and doctor screen. No averaging or editing of stored readings. */
 fun grouped(readings: List<Reading>, zone: ZoneId = ZoneId.systemDefault()): Map<LocalDate, Map<String, List<Reading>>> =
     readings.groupBy { it.localTime(zone).toLocalDate() }.toSortedMap(reverseOrder()).mapValues { (_, rows) ->

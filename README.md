@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/webcvalejandropina-ui/mitension-android/releases/download/v1.0.0-preview/Mi-Tension-Android-1.0.0-preview.apk"><strong>Descargar APK para Android</strong></a>
+  <a href="https://github.com/webcvalejandropina-ui/mitension-android/releases/download/v1.0.1-preview/Mi-Tension-Android-1.0.1-preview.apk"><strong>Descargar APK para Android</strong></a>
   · <a href="docs/INSTALLATION.md">Cómo instalar</a>
   · <a href="docs/PRIVACY.md">Privacidad</a>
 </p>
@@ -34,6 +34,17 @@ Una app nativa en Kotlin y Jetpack Compose para organizar las lecturas de tu ten
 
 ## Una guía que también se ve
 
+### Android: modo claro y oscuro
+
+<p align="center">
+  <img src="docs/media/android-light.png" width="32%" alt="Captura del resumen de Android en modo claro" />
+  <img src="docs/media/android-dark.png" width="32%" alt="Captura del resumen de Android en modo oscuro" />
+</p>
+
+*Capturas reales de la versión 1.0.1 en el emulador Android TV API 34 ajustado a proporciones de teléfono. Sin registros de pacientes. No sustituyen una revisión en un móvil Android real.*
+
+### Ilustraciones de la guía
+
 <p align="center">
   <img src="app/src/main/res/drawable-nodpi/guide_posture.png" width="48%" alt="Ilustración de postura sentada para medir la tensión con el brazo apoyado" />
   <img src="app/src/main/res/drawable-nodpi/guide_cuff.png" width="48%" alt="Ilustración de colocación del manguito en el brazo" />
@@ -49,11 +60,13 @@ Los datos no se envían a servidores propios: la app no solicita permiso de Inte
 
 ## Descargar e instalar
 
-[Repositorio Android](https://github.com/webcvalejandropina-ui/mitension-android) · [APK y versión de prueba](https://github.com/webcvalejandropina-ui/mitension-android/releases/tag/v1.0.0-preview)
+[Repositorio Android](https://github.com/webcvalejandropina-ui/mitension-android) · [APK y versión de prueba](https://github.com/webcvalejandropina-ui/mitension-android/releases/tag/v1.0.1-preview)
 
 El APK publicado es instalable en Android 8 o posterior y está firmado para pruebas (Debug). No es una versión certificada para producción ni una publicación en Google Play. Consulta [instalación, firma y actualización](docs/INSTALLATION.md) y [pruebas realizadas y pendientes](docs/VERIFICATION.md).
 
 ## Funciones
+
+El diseño Android toma como referencia la app iPhone: paleta adaptable, última toma, métricas y navegación inferior. Consulta los [criterios de diseño compartidos](docs/DESIGN_PARITY.md).
 
 - Formulario de una o tres tomas, con UUID individual, pulso, notas y medicamentos por toma.
 - Cada toma se guarda en el móvil; el lote se valida antes de una escritura atómica. Las tomas guardadas no se editan, solo se eliminan con confirmación.

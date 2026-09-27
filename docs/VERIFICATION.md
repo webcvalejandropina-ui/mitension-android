@@ -1,5 +1,7 @@
 # Verificación y límites
 
+Actualización de diseño 1.0.1: compilación Debug y lint sin errores; once tests JVM y seis tests instrumentados completados sin fallos. Se verifican los filtros con el mismo corte temporal que iPhone (incluido cambio de hora), métricas del resumen, navegación inferior y filtros médicos, además de las regresiones de almacenamiento y Excel existentes. Capturas del resumen claro/oscuro revisadas en el emulador Android TV API 34 con resolución 1080×2400 y densidad 420. No hay datos reales en las capturas. No se ha realizado una comparación píxel a píxel ni una prueba en teléfono real. Ver DESIGN_PARITY.md.
+
 Proyecto independiente: ninguna fuente ni configuración iOS se modifica para crear Android.
 
 Primera comprobación: APK Debug generado y nueve tests JVM sin fallos (Unicode, valores, periodo local, agrupación, Excel 1/2/3 de cada periodo, medicamentos/fecha exacta, fórmulas/UUID conflictivos, XML externo y planificación de segundos avisos). Las fixtures son sintéticas. Las posteriores correcciones de seguridad requieren repetir esa batería.

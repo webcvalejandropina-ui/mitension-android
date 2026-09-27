@@ -28,4 +28,16 @@ class NavigationTest {
         compose.onNodeWithText(context.t("Sistólica")).assertExists()
         compose.onNodeWithText(context.t("Diastólica")).assertExists()
     }
+    @Test fun bottomMenuShowsIPhoneDashboardAndMedicalPeriodFilters() {
+        val context = compose.activity
+        compose.onNodeWithText(context.t("ÚLTIMA TOMA")).assertExists()
+        compose.onNodeWithText(context.t("MEDIA 7 DÍAS")).assertExists()
+        compose.onNodeWithText(context.t("Médico")).performClick()
+        compose.onNodeWithText(context.t("Vista médica")).assertExists()
+        compose.onNodeWithText(context.t("90 días")).performClick()
+        compose.onNodeWithText(context.t("Promedio")).assertExists()
+        compose.onNodeWithText(context.t("Histórico")).performClick()
+        // Pager may retain the adjacent summary's filter in its composition.
+        compose.onAllNodesWithText(context.t("7 días")).onFirst().assertExists()
+    }
 }
