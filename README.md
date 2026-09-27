@@ -1,8 +1,51 @@
+<p align="center">
+  <img src="app/src/main/res/drawable-nodpi/app_icon.png" width="100" alt="Logo de Mi Tensión: una piña tomando la tensión" />
+</p>
+
+![Mi Tensión: tu rutina, más clara](docs/media/cover.svg)
+
+<p align="center">
+  <strong>Tu seguimiento de tensión, sin complicaciones.</strong><br />
+  Registra tus lecturas, acompaña tu rutina y lleva un histórico claro a tu próxima consulta.
+</p>
+
+<p align="center">
+  <a href="https://github.com/webcvalejandropina-ui/mitension-android/releases/download/v1.0.0-preview/Mi-Tension-Android-1.0.0-preview.apk"><strong>Descargar APK para Android</strong></a>
+  · <a href="docs/INSTALLATION.md">Cómo instalar</a>
+  · <a href="docs/PRIVACY.md">Privacidad</a>
+</p>
+
 # Mi Tensión — Android
 
-Proyecto nativo **independiente** de la app iOS y de la web. Kotlin + Jetpack Compose. No modifica ni necesita los proyectos anteriores para compilar. Las ilustraciones se copiaron como recursos propios de este proyecto.
+Una app nativa en Kotlin y Jetpack Compose para organizar las lecturas de tu tensiómetro. **Sin cuentas, sin publicidad y sin servidores propios.** Tus registros se guardan en el móvil y tú decides cuándo exportarlos o compartirlos.
 
-La app registra lecturas de un tensiómetro externo: **el teléfono no mide la presión arterial**. Sin login, pagos, servidores, publicidad ni permiso de Internet.
+> **Versión de prueba disponible.** Android 8 o posterior. La app registra lecturas de un tensiómetro externo: el teléfono no mide la presión arterial. No sustituye el consejo de un profesional sanitario.
+
+## De la toma a la consulta
+
+| Tu día a día | Lo que puedes hacer |
+| --- | --- |
+| Registrar con comodidad | Una o tres tomas, pulso, notas y medicamentos asociados a cada lectura. |
+| Ver todo en orden | Histórico agrupado por día y mañana/noche, con navegación horizontal. |
+| Entender tu evolución | Gráfica de las últimas 60 lecturas y referencias orientativas explicadas. |
+| Preparar tu consulta | Vista médica, PDF para compartir e impresión desde Android. |
+| Conservar una copia | Exportar e importar Excel, compatible con el formato de la app iOS. |
+| Cuidar tu rutina | Horarios configurables y segundo aviso a los 30 minutos si falta la toma. |
+
+## Una guía que también se ve
+
+<p align="center">
+  <img src="app/src/main/res/drawable-nodpi/guide_posture.png" width="48%" alt="Ilustración de postura sentada para medir la tensión con el brazo apoyado" />
+  <img src="app/src/main/res/drawable-nodpi/guide_cuff.png" width="48%" alt="Ilustración de colocación del manguito en el brazo" />
+</p>
+
+*Ilustraciones incluidas en la guía de la aplicación; no son capturas de la interfaz.* Puedes ampliarlas dentro de la app para consultar los detalles.
+
+## A tu idioma y a tu ritmo
+
+Modo claro y oscuro, guía ilustrada y diez idiomas según el dispositivo: español, inglés, francés, alemán, italiano, portugués, catalán, chino simplificado, japonés y árabe. No requiere registro ni pagos.
+
+Los datos no se envían a servidores propios: la app no solicita permiso de Internet. **Sí se guardan localmente en el dispositivo.** Las exportaciones contienen información de salud; compártelas solo cuando quieras y con quien corresponda.
 
 ## Descargar e instalar
 
@@ -22,6 +65,8 @@ El APK publicado es instalable en Android 8 o posterior y está firmado para pru
 - Colores claros/oscuros y recursos para español, inglés, francés, alemán, italiano, portugués, catalán, chino simplificado, japonés y árabe según el dispositivo.
 
 ## Requisitos
+
+Proyecto Android **independiente** de iOS y de la web. Incluye sus propias carpetas, recursos y dependencias; no necesitas los otros proyectos para compilar.
 
 - Android Studio compatible con AGP 8.13.2, o SDK/CLI Android.
 - JDK 17 para Gradle; wrapper **Gradle 8.13** con checksum de distribución.
