@@ -1,0 +1,213 @@
+<resources>
+    <string name="s_ead3a493">Imprimir</string>
+    <string name="app_name">Mi Tensión</string>
+    <string name="s_1afbfccf" formatted="false">Formato del archivo</string>
+    <string name="s_deb1c628" formatted="false">Columnas</string>
+    <string name="s_a69b6ee9" formatted="false">Usa el Excel (.xlsx) exportado por Mi Tensión como plantilla. Conserva la primera fila y el orden de las columnas; no uses fórmulas.</string>
+    <string name="s_16d098e2" formatted="false">Cada fila desde la segunda es una toma independiente. Puedes importar 1, 2 o 3 tomas de mañana o noche por día; no se promedian ni se exige completar tres.</string>
+    <string name="s_e993def4" formatted="false">Mañana y noche se calculan por la fecha y hora local: antes de las 14:00 es mañana; desde las 14:00 es noche. La columna B no cambia esa clasificación.</string>
+    <string name="s_f955df66" formatted="false">A, C, D y G son obligatorias. A debe ser una fecha y hora de Excel, no texto; C y D son números enteros sin unidades. E, F y H pueden quedar vacías.</string>
+    <string name="s_3526c142" formatted="false">G identifica cada toma: conserva su UUID para evitar duplicados y usa un UUID distinto para una toma nueva. I, J y K son columnas técnicas ocultas; no las modifiques ni copies sus valores a tomas nuevas.</string>
+    <string name="s_d9dc4ecc" formatted="false">Pellizca o toca dos veces para ampliar.</string>
+    <string name="s_d4b1d477" formatted="false">Toca para ampliar la imagen.</string>
+    <string name="s_4d5c2d62" formatted="false">Importar registros de Excel</string>
+    <string name="s_bd37a5c3" formatted="false">Selecciona un archivo Excel exportado por Mi Tensión. Se añaden los registros nuevos sin borrar tu histórico ni duplicar tomas.</string>
+    <string name="s_d8215a28" formatted="false">No se pudo importar el Excel. Usa un archivo exportado por Mi Tensión con registros válidos.</string>
+    <string name="s_ef3d37a3" formatted="false">Segundos avisos programados: %ld</string>
+    <string name="s_7ba6fa8a" formatted="false">Han pasado 30 minutos y no has guardado la toma de este periodo. Regístrala cuando puedas.</string>
+    <string name="s_6afcd43b" formatted="false">No se pudo actualizar el segundo aviso. Revisa los permisos de notificaciones y vuelve a abrir Alertas.</string>
+    <string name="s_19bc8f2c" formatted="false">Si no guardas una toma de ese día y periodo, recibirás una segunda notificación con sonido 30 minutos después. Solo se repite una vez. Se preparan los próximos 21 días y se renuevan al abrir la app; abre Mi Tensión al menos cada tres semanas. La alarma del sistema no se repite.</string>
+    <string name="s_dc5f854f" formatted="false">Abrir ajustes de alarmas</string>
+    <string name="s_2bcf547a" formatted="false">Probar alarma en 10 segundos</string>
+    <string name="s_a1e8ec34" formatted="false">Alarma de prueba programada.</string>
+    <string name="s_c80eac83" formatted="false">Alarma sonora además de la notificación</string>
+    <string name="s_18ecbd73" formatted="false">La alarma sonora está disponible desde Android 26.</string>
+    <string name="s_c044241a" formatted="false">Configuración guardada. Permite las alarmas en Ajustes para que suenen.</string>
+    <string name="s_188f4d36" formatted="false">La alarma sonora requiere Android 26 y permiso de alarmas. Puede sonar en silencio o con Concentración, aunque la app esté cerrada. Desactívala si prefieres solo la notificación.</string>
+    <string name="s_3ebf14aa" formatted="false">Campo anterior</string>
+    <string name="s_69a94dcd" formatted="false">Campo siguiente</string>
+    <string name="s_2e7572a5" formatted="false">Cerrar teclado</string>
+    <string name="s_33f261b" formatted="false">Configuración guardada. Activa las notificaciones en Ajustes para recibir avisos.</string>
+    <string name="s_6e99506c" formatted="false">Guardar aplica los cambios. Cerrar también guarda los cambios pendientes. Sin permiso de notificaciones, la configuración se conserva pero los avisos no se mostrarán.</string>
+    <string name="s_fc8b8ba4" formatted="false">Número de tomas</string>
+    <string name="s_5596cfde" formatted="false">1 toma</string>
+    <string name="s_c70fa2d7" formatted="false">3 tomas</string>
+    <string name="s_c51cb22c" formatted="false">Toma %ld</string>
+    <string name="s_b9b19c0d" formatted="false">Cada toma se guarda por separado. Introduce los valores de cada medición.</string>
+    <string name="s_474ab8c3" formatted="false">Se asigna automáticamente al guardar según la hora local del móvil: mañana antes de las 14:00 y noche desde las 14:00. Una toma guardada solo se puede eliminar.</string>
+    <string name="s_dcae2004" formatted="false">Continuación</string>
+    <string name="s_31d56f75" formatted="false">No se pudo leer el histórico. Se conserva el archivo original; no guardes nuevas tomas hasta recuperarlo.</string>
+    <string name="s_70e0bf52" formatted="false">Sistólica (alta)</string>
+    <string name="s_71b6689a" formatted="false">Diastólica (baja)</string>
+    <string name="s_657e10b6" formatted="false">Sobre la referencia</string>
+    <string name="s_774e9b2c" formatted="false">Por debajo de la referencia</string>
+    <string name="s_71502458" formatted="false">Qué significan estos valores</string>
+    <string name="s_adb167a4" formatted="false">La alta (sistólica) es la presión cuando el corazón se contrae. La baja (diastólica) es la presión entre latidos; ‘baja’ no significa que el valor sea bajo.</string>
+    <string name="s_6dd12efc" formatted="false">Referencia orientativa en casa para adultos: sistólica desde 135 o diastólica desde 85 mmHg. Se interpreta el promedio de varios días, no una toma aislada. Si se repite, consúltalo; no cambies tu medicación por tu cuenta. Tus objetivos pueden ser distintos. No se aplica a menores ni al embarazo.</string>
+    <string name="s_7a8bd5e7" formatted="false">Lectura muy elevada. Con dolor de pecho, falta de aire, debilidad o dificultad para hablar, llama a emergencias sin esperar. Sin síntomas, repite tras al menos 1 minuto y, si sigue así, contacta cuanto antes con un profesional sanitario.</string>
+    <string name="s_a4a3d5c1" formatted="false">Resumen</string>
+    <string name="s_e58f1e54" formatted="false">Histórico</string>
+    <string name="s_906797ed" formatted="false">Médico</string>
+    <string name="s_221aa2" formatted="false">Guía</string>
+    <string name="s_3e44d7c" formatted="false">Copia</string>
+    <string name="s_42578d50" formatted="false">Guardar nueva toma</string>
+    <string name="s_790dad76" formatted="false">Guardar</string>
+    <string name="s_fc82e84b" formatted="false">Cancelar</string>
+    <string name="s_371ca486" formatted="false">Nueva toma</string>
+    <string name="s_43918486" formatted="false">Registro individual</string>
+    <string name="s_c60c1af6" formatted="false">Esta toma tendrá un identificador único y se guardará en este móvil Android.</string>
+    <string name="s_5d347db6" formatted="false">Tensión arterial</string>
+    <string name="s_447d2917" formatted="false">Sistólica</string>
+    <string name="s_a6d75871" formatted="false">Diastólica</string>
+    <string name="s_8bf34eec" formatted="false">Momento de la toma</string>
+    <string name="s_acd9564f" formatted="false">Momento</string>
+    <string name="s_892b16f7" formatted="false">Mañana</string>
+    <string name="s_47f1f1f" formatted="false">Noche</string>
+    <string name="s_568946e0" formatted="false">Fecha y hora</string>
+    <string name="s_378606e4" formatted="false">Datos opcionales</string>
+    <string name="s_49e2b83" formatted="false">Pulso</string>
+    <string name="s_806e30c6" formatted="false">Nota para esta toma</string>
+    <string name="s_284263a5" formatted="false">Máximo 140 caracteres</string>
+    <string name="s_85510e1b" formatted="false">Introduce una sistólica entre 40 y 300 mmHg.</string>
+    <string name="s_a49d2120" formatted="false">La diastólica debe estar entre 30 y 200 y ser menor que la sistólica.</string>
+    <string name="s_a8611f3c" formatted="false">Introduce un pulso entre 20 y 250 lpm.</string>
+    <string name="s_67b7b448" formatted="false">No se pudo guardar la toma en este móvil Android. Inténtalo de nuevo.</string>
+    <string name="s_4c6b4419" formatted="false">Mis mediciones</string>
+    <string name="s_e2624268" formatted="false">Guardado en este móvil Android</string>
+    <string name="s_7ebcc62e" formatted="false">Guardada en el Android</string>
+    <string name="s_30bfa70a" formatted="false">Aún no hay tomas guardadas</string>
+    <string name="s_28f0ab04" formatted="false">Tomas disponibles sin conexión: %ld</string>
+    <string name="s_f04d29d4" formatted="false">ÚLTIMA TOMA</string>
+    <string name="s_a234b9c" formatted="false">Pulsa “Guardar nueva toma” para empezar.</string>
+    <string name="s_f9cbd920" formatted="false">MEDIA 7 DÍAS</string>
+    <string name="s_8a6ea3be" formatted="false">ESTA SEMANA</string>
+    <string name="s_696c104" formatted="false">tomas</string>
+    <string name="s_b5a10508" formatted="false">EVOLUCIÓN</string>
+    <string name="s_91079878" formatted="false">Últimas mediciones</string>
+    <string name="s_1a30c3e9" formatted="false">Tu evolución aparecerá aquí</string>
+    <string name="s_954ebb58" formatted="false">Guarda dos o más tomas.</string>
+    <string name="s_b3ca35d2" formatted="false">Registro de tomas</string>
+    <string name="s_d62886b3" formatted="false">Cada tarjeta es una toma independiente</string>
+    <string name="s_3ac3daae" formatted="false">Periodo</string>
+    <string name="s_5fce7544" formatted="false">7 días</string>
+    <string name="s_ddba56de" formatted="false">30 días</string>
+    <string name="s_1b1fba64" formatted="false">90 días</string>
+    <string name="s_27dc66" formatted="false">Todo</string>
+    <string name="s_4d3af1b" formatted="false">Todas</string>
+    <string name="s_a5aaaf9c" formatted="false">Sin tomas</string>
+    <string name="s_d87a9c23" formatted="false">Guarda tu primera medición.</string>
+    <string name="s_f6cefbab" formatted="false">¿Eliminar esta toma?</string>
+    <string name="s_27eecca9" formatted="false">Eliminar definitivamente</string>
+    <string name="s_97f2a6d" formatted="false">La toma se borrará del almacenamiento local del móvil.</string>
+    <string name="s_dfe6134e" formatted="false">Eliminar toma</string>
+    <string name="s_612b1c06" formatted="false">Tomas guardadas en este móvil Android: %ld</string>
+    <string name="s_cb3488e0" formatted="false">Sin tomas en este periodo</string>
+    <string name="s_539710d2" formatted="false">Vista médica</string>
+    <string name="s_ee662eb0" formatted="false">Mediciones</string>
+    <string name="s_c87dc585" formatted="false">Promedio</string>
+    <string name="s_7125c2f8" formatted="false">Sin mediciones</string>
+    <string name="s_1be0282e" formatted="false">No hay datos en este periodo.</string>
+    <string name="s_d5f27807" formatted="false">Compartir o imprimir</string>
+    <string name="s_47a26b54" formatted="false">Últimos %ld días</string>
+    <string name="s_967d22b4" formatted="false">Historial completo</string>
+    <string name="s_1a369" formatted="false">lpm</string>
+    <string name="s_5231ae75" formatted="false">Copia de seguridad</string>
+    <string name="s_d584bd65" formatted="false">Guarda una copia de tus mediciones en Archivos, iCloud Drive o el servicio que prefieras.</string>
+    <string name="s_ecdde7b9" formatted="false">Crear y compartir copia</string>
+    <string name="s_304f4272" formatted="false">Restaurar desde una copia</string>
+    <string name="s_5f2dfd59" formatted="false">Contenido</string>
+    <string name="s_6179e5d7" formatted="false">Última copia</string>
+    <string name="s_db062cc9" formatted="false">La copia contiene datos de salud. Guárdala en un lugar privado y compártela solo con personas de confianza.</string>
+    <string name="s_909153e3" formatted="false">Copia y restauración</string>
+    <string name="s_4f1d1d94" formatted="false">Tomas restauradas: %ld</string>
+    <string name="s_549e3fde" formatted="false">No se pudo leer esta copia.</string>
+    <string name="s_2ce323c2" formatted="false">Copia preparada correctamente.</string>
+    <string name="s_aed0fc3" formatted="false">No se pudo crear la copia.</string>
+    <string name="s_db201bd4" formatted="false">Guía y privacidad</string>
+    <string name="s_b1b0cb8e" formatted="false">Cómo tomar la tensión</string>
+    <string name="s_5f56ebdd" formatted="false">Prepara el tensiómetro</string>
+    <string name="s_7c829133" formatted="false">Usa un tensiómetro validado de brazo y un manguito de tu talla. La app registra las lecturas del aparato.</string>
+    <string name="s_5778ea1" formatted="false">Antes de medir</string>
+    <string name="s_d9208800" formatted="false">Evita ejercicio, tabaco y cafeína durante los 30 minutos previos. Vacía la vejiga.</string>
+    <string name="s_85e87776" formatted="false">Descansa 5 minutos</string>
+    <string name="s_3e61eef1" formatted="false">Siéntate en silencio, con la espalda apoyada, los pies en el suelo y las piernas sin cruzar.</string>
+    <string name="s_9ee49f60" formatted="false">Coloca el brazo</string>
+    <string name="s_bce0d3dc" formatted="false">Pon el manguito sobre la piel, siguiendo las instrucciones del aparato. Apoya el brazo a la altura del corazón.</string>
+    <string name="s_7351154d" formatted="false">Haz dos tomas</string>
+    <string name="s_a38f8d7f" formatted="false">No hables ni te muevas. Espera al menos 1 minuto entre las dos mediciones y guarda cada una por separado.</string>
+    <string name="s_996169f1" formatted="false">Sigue tu pauta</string>
+    <string name="s_7bdf6efa" formatted="false">Mide en los horarios indicados por tu profesional sanitario y lleva el informe a la consulta.</string>
+    <string name="s_f5d01df6" formatted="false">Fuente: American Heart Association</string>
+    <string name="s_f3051bee" formatted="false">Tu privacidad</string>
+    <string name="s_ea1c8dca" formatted="false">No guardamos datos en servidores</string>
+    <string name="s_96f4866e" formatted="false">Tus tomas y notas se guardan únicamente en el almacenamiento local de este móvil Android para que puedas consultar el histórico. La app no exige una cuenta ni envía tus mediciones a nuestros servidores.</string>
+    <string name="s_3c612b37" formatted="false">Solo tú decides si exportas o compartes un informe o una copia. Las copias del dispositivo pueden incluir los datos de la app según tus ajustes de Android.</string>
+    <string name="s_cfff210d" formatted="false">Eliminar la app puede borrar el histórico local. Exporta una copia si quieres conservarlo.</string>
+    <string name="s_8d841cb6" formatted="false">Informe de seguimiento · %@</string>
+    <string name="s_818ba723" formatted="false">Generado el %@</string>
+    <string name="s_5ea6d1ca" formatted="false">Las mediciones han sido introducidas por el usuario. Este informe no sustituye la valoración clínica.</string>
+    <string name="s_409d75d" formatted="false">Fecha</string>
+    <string name="s_4c1415c" formatted="false">Serie</string>
+    <string name="s_2c85466e" formatted="false">Alertas</string>
+    <string name="s_139ed330" formatted="false">Recordatorios para tus tomas</string>
+    <string name="s_c411130e" formatted="false">Elige horarios y días para la mañana y la noche. Los avisos están desactivados inicialmente.</string>
+    <string name="s_5cdc1c7e" formatted="false">Selecciona al menos un día.</string>
+    <string name="s_ba1a9a23" formatted="false">Activa las notificaciones en Ajustes para recibir avisos.</string>
+    <string name="s_4c085815" formatted="false">Hora de tomar la tensión</string>
+    <string name="s_1c0e9bf9" formatted="false">Descansa unos minutos y registra tu toma en Mi Tensión.</string>
+    <string name="s_780e21e4" formatted="false">Guardar alertas</string>
+    <string name="s_645478a6" formatted="false">Alertas guardadas.</string>
+    <string name="s_1fb58fbe" formatted="false">Abrir ajustes de notificaciones</string>
+    <string name="s_d8b872b9" formatted="false">Información</string>
+    <string name="s_b8d7f7ff" formatted="false">Los avisos se programan en este móvil Android, sin enviar datos a servidores. Funcionan aunque la app esté cerrada.</string>
+    <string name="s_4afc7f19" formatted="false">Debes permitir las notificaciones. El modo Concentración y los ajustes de sonido pueden silenciar o retrasar los avisos.</string>
+    <string name="s_469a8ee6" formatted="false">Son recordatorios, no alarmas médicas: no detectan valores de tensión ni sustituyen las indicaciones de tu médico.</string>
+    <string name="s_ee47328c" formatted="false">Pulsa Guardar alertas para aplicar los cambios. Desactiva ambos avisos y guarda para cancelarlos.</string>
+    <string name="s_781981f3" formatted="false">Cerrar</string>
+    <string name="s_b144c5a0" formatted="false">Activar aviso</string>
+    <string name="s_226996" formatted="false">Hora</string>
+    <string name="s_2d1420aa" formatted="false">Días de la semana</string>
+    <string name="s_13cbf" formatted="false">Más</string>
+    <string name="s_e3bad0bc" formatted="false">Gráficas</string>
+    <string name="s_54ae2459" formatted="false">Tus datos, de un vistazo</string>
+    <string name="s_8df2f87e" formatted="false">Observa tus mediciones a lo largo del tiempo.</string>
+    <string name="s_46c7fc4" formatted="false">Media</string>
+    <string name="s_96a4d5de" formatted="false">Cuida tu rutina</string>
+    <string name="s_691572bd" formatted="false">Guía, avisos y tus datos, en un solo lugar.</string>
+    <string name="s_3ee268c9" formatted="false">Configura tus horarios y días.</string>
+    <string name="s_660a5f6" formatted="false">Cómo medir y cómo cuidamos tus datos.</string>
+    <string name="s_e40e17fd" formatted="false">Exportar a Excel</string>
+    <string name="s_f8b4e9c8" formatted="false">Todas tus tomas en una hoja de cálculo.</string>
+    <string name="s_9373a6ee" formatted="false">Conserva y restaura tu histórico.</string>
+    <string name="s_13bb6c38" formatted="false">Notas e identificador único</string>
+    <string name="s_629e024a" formatted="false">Crear archivo Excel</string>
+    <string name="s_5dc799e1" formatted="false">No se pudo exportar el archivo.</string>
+    <string name="s_47f5e25" formatted="false">Notas</string>
+    <string name="s_3848b42e" formatted="false">Probar aviso en 10 segundos</string>
+    <string name="s_541915a6" formatted="false">Aviso de prueba programado.</string>
+    <string name="s_8df6a8a9" formatted="false">Avisos programados: %ld</string>
+    <string name="s_c5861815" formatted="false">Ocultar este aviso</string>
+    <string name="s_47ddbb91" formatted="false">No volverá a mostrarse en este móvil Android. Tus tomas se conservan.</string>
+    <string name="s_47f2d038" formatted="false">Medicamentos de esta toma</string>
+    <string name="s_62bfb41c" formatted="false">Registra la medicación asociada a esta medición. Es un registro, no una recomendación de tratamiento.</string>
+    <string name="s_954a93aa" formatted="false">Nombre del medicamento</string>
+    <string name="s_52d3bede" formatted="false">Dosis (opcional)</string>
+    <string name="s_9471bd41" formatted="false">Nota del medicamento (opcional)</string>
+    <string name="s_a8a355b2" formatted="false">Añadir medicamento</string>
+    <string name="s_7ad13536" formatted="false">Quitar medicamento</string>
+    <string name="s_deeaa6fd" formatted="false">Introduce el nombre del medicamento o elimina la fila vacía.</string>
+    <string name="s_52eba893" formatted="false">Todavía no hay tomas</string>
+    <string name="s_5553b215" formatted="false">Medición muy elevada</string>
+    <string name="s_7a8aff97" formatted="false">Eliminar medicamento</string>
+    <string name="s_a5e1cd61" formatted="false">Revisa los valores de las tomas.</string>
+    <string name="s_28cba5b9" formatted="false">Guardar toma</string>
+    <string name="s_e6d0b2d8" formatted="false">Anterior</string>
+    <string name="s_c3cb755f" formatted="false">Siguiente</string>
+    <string name="s_e65c61dc" formatted="false">Alarma sonora</string>
+    <string name="s_54962ea7" formatted="false">Detener alarma</string>
+    <string name="s_c7dea4d6" formatted="false">Configuración guardada</string>
+    <string name="s_b2ba5380" formatted="false">Permiso de alarmas exactas</string>
+    <string name="s_a4ee1fce" formatted="false">A los 30 minutos volveremos a avisarte si no has guardado la toma de ese día y periodo.</string>
+    <string name="s_3cab47ad" formatted="false">Sin permiso de alarmas exactas, Android puede retrasar los avisos. Las alarmas sonoras necesitan ese permiso.</string>
+    <string name="s_15a668fc" formatted="false">Las referencias son orientativas para adultos, no un diagnóstico ni un objetivo personal. No se aplican al embarazo ni a menores.</string>
+</resources>

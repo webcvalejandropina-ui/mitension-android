@@ -1,0 +1,213 @@
+<resources>
+    <string name="s_ead3a493">Stampa</string>
+    <string name="app_name">Mi Tensión</string>
+    <string name="s_1afbfccf" formatted="false">Formato del file</string>
+    <string name="s_deb1c628" formatted="false">Colonne</string>
+    <string name="s_a69b6ee9" formatted="false">Usa l’Excel (.xlsx) esportato da Mi Tensión come modello. Mantieni la prima riga e l’ordine delle colonne; non usare formule.</string>
+    <string name="s_16d098e2" formatted="false">Ogni riga dalla seconda è una misurazione distinta. Puoi importare 1, 2 o 3 misurazioni mattutine o serali al giorno; non vengono mediate e non ne servono tre.</string>
+    <string name="s_e993def4" formatted="false">Mattina e sera dipendono dalla data e ora locale: prima delle 14:00 mattina; dalle 14:00 sera. La colonna B non modifica questa classificazione.</string>
+    <string name="s_f955df66" formatted="false">A, C, D e G sono obbligatorie. A deve essere una data/ora Excel, non testo; C e D sono interi senza unità. E, F e H possono essere vuote.</string>
+    <string name="s_3526c142" formatted="false">G identifica la misurazione: conserva l’UUID per evitare duplicati e usa un UUID diverso per una nuova misurazione. I, J e K sono colonne tecniche nascoste; non modificarle né copiarne i valori in nuove misurazioni.</string>
+    <string name="s_d9dc4ecc" formatted="false">Pizzica o tocca due volte per ingrandire.</string>
+    <string name="s_d4b1d477" formatted="false">Tocca per ingrandire l’immagine.</string>
+    <string name="s_4d5c2d62" formatted="false">Importa misurazioni da Excel</string>
+    <string name="s_bd37a5c3" formatted="false">Seleziona un file Excel esportato da Mi Tensión. Le nuove misurazioni vengono aggiunte senza cancellare la cronologia o duplicare i dati.</string>
+    <string name="s_d8215a28" formatted="false">Impossibile importare Excel. Usa un file esportato da Mi Tensión con misurazioni valide.</string>
+    <string name="s_ef3d37a3" formatted="false">Secondi avvisi programmati: %ld</string>
+    <string name="s_7ba6fa8a" formatted="false">Sono passati 30 minuti e non hai salvato una misurazione per questo periodo. Registrala quando puoi.</string>
+    <string name="s_6afcd43b" formatted="false">Impossibile aggiornare il secondo avviso. Controlla i permessi delle notifiche e riapri gli avvisi.</string>
+    <string name="s_19bc8f2c" formatted="false">Se non salvi una misurazione per quel giorno e periodo, arriva una seconda notifica sonora dopo 30 minuti. Si ripete una sola volta. Vengono programmati i prossimi 21 giorni e rinnovati all’apertura dell’app; apri Mi Tensión almeno ogni tre settimane. L’allarme di sistema non si ripete.</string>
+    <string name="s_dc5f854f" formatted="false">Apri impostazioni degli allarmi</string>
+    <string name="s_2bcf547a" formatted="false">Prova allarme tra 10 secondi</string>
+    <string name="s_a1e8ec34" formatted="false">Allarme di prova programmato.</string>
+    <string name="s_c80eac83" formatted="false">Allarme sonoro oltre alla notifica</string>
+    <string name="s_18ecbd73" formatted="false">Gli allarmi sonori sono disponibili da Android 26.</string>
+    <string name="s_c044241a" formatted="false">Configurazione salvata. Consenti gli allarmi nelle Impostazioni per farli suonare.</string>
+    <string name="s_188f4d36" formatted="false">Gli allarmi sonori richiedono Android 26 e il permesso per gli allarmi. Possono suonare in modalità Silenzioso o Full immersion, anche con l’app chiusa. Disattivali se preferisci solo le notifiche.</string>
+    <string name="s_3ebf14aa" formatted="false">Campo precedente</string>
+    <string name="s_69a94dcd" formatted="false">Campo successivo</string>
+    <string name="s_2e7572a5" formatted="false">Chiudi tastiera</string>
+    <string name="s_33f261b" formatted="false">Configurazione salvata. Attiva le notifiche nelle Impostazioni per ricevere promemoria.</string>
+    <string name="s_6e99506c" formatted="false">Salva applica le modifiche. Chiudi salva anche le modifiche in sospeso. Senza autorizzazione alle notifiche, le impostazioni restano salvate ma i promemoria non vengono mostrati.</string>
+    <string name="s_fc8b8ba4" formatted="false">Numero di misurazioni</string>
+    <string name="s_5596cfde" formatted="false">1 misurazione</string>
+    <string name="s_c70fa2d7" formatted="false">3 misurazioni</string>
+    <string name="s_c51cb22c" formatted="false">Misurazione %ld</string>
+    <string name="s_b9b19c0d" formatted="false">Ogni misurazione viene salvata separatamente. Inserisci i valori di ogni misurazione.</string>
+    <string name="s_474ab8c3" formatted="false">Assegnato automaticamente al salvataggio secondo l’ora locale dell’Android: mattina prima delle 14:00, sera dalle 14:00. Le misurazioni salvate si possono solo eliminare.</string>
+    <string name="s_dcae2004" formatted="false">Continua</string>
+    <string name="s_31d56f75" formatted="false">Impossibile leggere lo storico. Il file originale è conservato; recuperalo prima di salvare nuove misurazioni.</string>
+    <string name="s_70e0bf52" formatted="false">Sistolica (massima)</string>
+    <string name="s_71b6689a" formatted="false">Diastolica (minima)</string>
+    <string name="s_657e10b6" formatted="false">Sopra il riferimento</string>
+    <string name="s_774e9b2c" formatted="false">Sotto il riferimento</string>
+    <string name="s_71502458" formatted="false">Cosa significano questi valori</string>
+    <string name="s_adb167a4" formatted="false">La sistolica è la pressione quando il cuore si contrae. La diastolica è la pressione tra i battiti; «minima» non significa che il valore sia basso.</string>
+    <string name="s_6dd12efc" formatted="false">Riferimento a casa per adulti: sistolica da 135 o diastolica da 85 mmHg. Conta la media di più giorni, non una misura isolata. Se si ripete, consulta un professionista; non cambiare farmaci da solo. I tuoi obiettivi possono essere diversi. Non per minori o gravidanza.</string>
+    <string name="s_7a8bd5e7" formatted="false">Valore molto alto. Con dolore al petto, fiato corto, debolezza o difficoltà a parlare, chiama subito i soccorsi. Senza sintomi, ripeti dopo almeno 1 minuto; se resta così alto, contatta quanto prima un professionista sanitario.</string>
+    <string name="s_a4a3d5c1" formatted="false">Riepilogo</string>
+    <string name="s_e58f1e54" formatted="false">Cronologia</string>
+    <string name="s_906797ed" formatted="false">Medico</string>
+    <string name="s_221aa2" formatted="false">Guida</string>
+    <string name="s_3e44d7c" formatted="false">Backup</string>
+    <string name="s_42578d50" formatted="false">Salva nuova misurazione</string>
+    <string name="s_790dad76" formatted="false">Salva</string>
+    <string name="s_fc82e84b" formatted="false">Annulla</string>
+    <string name="s_371ca486" formatted="false">Nuova misurazione</string>
+    <string name="s_43918486" formatted="false">Misurazione individuale</string>
+    <string name="s_c60c1af6" formatted="false">Questa misurazione avrà un identificativo univoco e sarà salvata su questo Android.</string>
+    <string name="s_5d347db6" formatted="false">Pressione arteriosa</string>
+    <string name="s_447d2917" formatted="false">Sistolica</string>
+    <string name="s_a6d75871" formatted="false">Diastolica</string>
+    <string name="s_8bf34eec" formatted="false">Momento della misurazione</string>
+    <string name="s_acd9564f" formatted="false">Momento</string>
+    <string name="s_892b16f7" formatted="false">Mattina</string>
+    <string name="s_47f1f1f" formatted="false">Sera</string>
+    <string name="s_568946e0" formatted="false">Data e ora</string>
+    <string name="s_378606e4" formatted="false">Dati facoltativi</string>
+    <string name="s_49e2b83" formatted="false">Battito</string>
+    <string name="s_806e30c6" formatted="false">Nota per questa misurazione</string>
+    <string name="s_284263a5" formatted="false">Massimo 140 caratteri</string>
+    <string name="s_85510e1b" formatted="false">Inserisci una sistolica tra 40 e 300 mmHg.</string>
+    <string name="s_a49d2120" formatted="false">La diastolica deve essere tra 30 e 200 e inferiore alla sistolica.</string>
+    <string name="s_a8611f3c" formatted="false">Inserisci un battito tra 20 e 250 bpm.</string>
+    <string name="s_67b7b448" formatted="false">Impossibile salvare la misurazione su questo Android. Riprova.</string>
+    <string name="s_4c6b4419" formatted="false">Le mie misurazioni</string>
+    <string name="s_e2624268" formatted="false">Salvato su questo Android</string>
+    <string name="s_7ebcc62e" formatted="false">Salvata su Android</string>
+    <string name="s_30bfa70a" formatted="false">Nessuna misurazione salvata</string>
+    <string name="s_28f0ab04" formatted="false">Misurazioni disponibili offline: %ld</string>
+    <string name="s_f04d29d4" formatted="false">ULTIMA MISURAZIONE</string>
+    <string name="s_a234b9c" formatted="false">Tocca “Salva nuova misurazione” per iniziare.</string>
+    <string name="s_f9cbd920" formatted="false">MEDIA 7 GIORNI</string>
+    <string name="s_8a6ea3be" formatted="false">QUESTA SETTIMANA</string>
+    <string name="s_696c104" formatted="false">misurazioni</string>
+    <string name="s_b5a10508" formatted="false">ANDAMENTO</string>
+    <string name="s_91079878" formatted="false">Misurazioni recenti</string>
+    <string name="s_1a30c3e9" formatted="false">Il tuo andamento apparirà qui</string>
+    <string name="s_954ebb58" formatted="false">Salva almeno due misurazioni.</string>
+    <string name="s_b3ca35d2" formatted="false">Registro misurazioni</string>
+    <string name="s_d62886b3" formatted="false">Ogni scheda è una misurazione distinta</string>
+    <string name="s_3ac3daae" formatted="false">Periodo</string>
+    <string name="s_5fce7544" formatted="false">7 giorni</string>
+    <string name="s_ddba56de" formatted="false">30 giorni</string>
+    <string name="s_1b1fba64" formatted="false">90 giorni</string>
+    <string name="s_27dc66" formatted="false">Tutto</string>
+    <string name="s_4d3af1b" formatted="false">Tutte</string>
+    <string name="s_a5aaaf9c" formatted="false">Nessuna misurazione</string>
+    <string name="s_d87a9c23" formatted="false">Salva la tua prima misurazione.</string>
+    <string name="s_f6cefbab" formatted="false">Eliminare questa misurazione?</string>
+    <string name="s_27eecca9" formatted="false">Elimina definitivamente</string>
+    <string name="s_97f2a6d" formatted="false">La misurazione sarà eliminata dalla memoria locale dell\'Android.</string>
+    <string name="s_dfe6134e" formatted="false">Elimina misurazione</string>
+    <string name="s_612b1c06" formatted="false">Misurazioni salvate su questo Android: %ld</string>
+    <string name="s_cb3488e0" formatted="false">Nessuna misurazione in questo periodo</string>
+    <string name="s_539710d2" formatted="false">Vista medica</string>
+    <string name="s_ee662eb0" formatted="false">Misurazioni</string>
+    <string name="s_c87dc585" formatted="false">Media</string>
+    <string name="s_7125c2f8" formatted="false">Nessuna misurazione</string>
+    <string name="s_1be0282e" formatted="false">Nessun dato in questo periodo.</string>
+    <string name="s_d5f27807" formatted="false">Condividi o stampa</string>
+    <string name="s_47a26b54" formatted="false">Ultimi %ld giorni</string>
+    <string name="s_967d22b4" formatted="false">Cronologia completa</string>
+    <string name="s_1a369" formatted="false">bpm</string>
+    <string name="s_5231ae75" formatted="false">Backup</string>
+    <string name="s_d584bd65" formatted="false">Salva una copia delle misurazioni in File, iCloud Drive o nel servizio che preferisci.</string>
+    <string name="s_ecdde7b9" formatted="false">Crea e condividi backup</string>
+    <string name="s_304f4272" formatted="false">Ripristina da backup</string>
+    <string name="s_5f2dfd59" formatted="false">Contenuto</string>
+    <string name="s_6179e5d7" formatted="false">Ultimo backup</string>
+    <string name="s_db062cc9" formatted="false">Il backup contiene dati sanitari. Conservalo in privato e condividilo solo con persone fidate.</string>
+    <string name="s_909153e3" formatted="false">Backup e ripristino</string>
+    <string name="s_4f1d1d94" formatted="false">Misurazioni ripristinate: %ld</string>
+    <string name="s_549e3fde" formatted="false">Impossibile leggere questo backup.</string>
+    <string name="s_2ce323c2" formatted="false">Backup creato correttamente.</string>
+    <string name="s_aed0fc3" formatted="false">Impossibile creare il backup.</string>
+    <string name="s_db201bd4" formatted="false">Guida e privacy</string>
+    <string name="s_b1b0cb8e" formatted="false">Come misurare la pressione</string>
+    <string name="s_5f56ebdd" formatted="false">Prepara il misuratore</string>
+    <string name="s_7c829133" formatted="false">Usa un misuratore da braccio validato con un bracciale della misura corretta. L\'app registra le letture del dispositivo.</string>
+    <string name="s_5778ea1" formatted="false">Prima di misurare</string>
+    <string name="s_d9208800" formatted="false">Evita esercizio, tabacco e caffeina nei 30 minuti precedenti. Svuota la vescica.</string>
+    <string name="s_85e87776" formatted="false">Riposa 5 minuti</string>
+    <string name="s_3e61eef1" formatted="false">Siediti in silenzio con la schiena appoggiata, i piedi a terra e le gambe non incrociate.</string>
+    <string name="s_9ee49f60" formatted="false">Posiziona il braccio</string>
+    <string name="s_bce0d3dc" formatted="false">Posiziona il bracciale sulla pelle seguendo le istruzioni del dispositivo. Appoggia il braccio all\'altezza del cuore.</string>
+    <string name="s_7351154d" formatted="false">Esegui due misurazioni</string>
+    <string name="s_a38f8d7f" formatted="false">Non parlare e non muoverti. Attendi almeno 1 minuto tra le misurazioni e salva ciascuna separatamente.</string>
+    <string name="s_996169f1" formatted="false">Segui le indicazioni</string>
+    <string name="s_7bdf6efa" formatted="false">Misura negli orari indicati dal professionista sanitario e porta il rapporto alla visita.</string>
+    <string name="s_f5d01df6" formatted="false">Fonte: American Heart Association</string>
+    <string name="s_f3051bee" formatted="false">La tua privacy</string>
+    <string name="s_ea1c8dca" formatted="false">Non salviamo dati sui server</string>
+    <string name="s_96f4866e" formatted="false">Le misurazioni e le note vengono salvate solo su questo Android per consultare la cronologia. L\'app non richiede un account e non invia le misurazioni ai nostri server.</string>
+    <string name="s_3c612b37" formatted="false">Decidi tu se esportare o condividere un rapporto o un backup. I backup del dispositivo possono includere i dati dell\'app in base alle impostazioni Android.</string>
+    <string name="s_cfff210d" formatted="false">Eliminare l\'app può cancellare la cronologia locale. Esporta un backup per conservarla.</string>
+    <string name="s_8d841cb6" formatted="false">Rapporto di monitoraggio · %@</string>
+    <string name="s_818ba723" formatted="false">Generato il %@</string>
+    <string name="s_5ea6d1ca" formatted="false">Le misurazioni sono state inserite dall\'utente. Questo rapporto non sostituisce una valutazione clinica.</string>
+    <string name="s_409d75d" formatted="false">Data</string>
+    <string name="s_4c1415c" formatted="false">Serie</string>
+    <string name="s_2c85466e" formatted="false">Promemoria</string>
+    <string name="s_139ed330" formatted="false">Promemoria per le misurazioni</string>
+    <string name="s_c411130e" formatted="false">Scegli orari e giorni per mattina e sera. I promemoria sono inizialmente disattivati.</string>
+    <string name="s_5cdc1c7e" formatted="false">Seleziona almeno un giorno.</string>
+    <string name="s_ba1a9a23" formatted="false">Attiva le notifiche nelle Impostazioni per ricevere i promemoria.</string>
+    <string name="s_4c085815" formatted="false">È ora di misurare la pressione</string>
+    <string name="s_1c0e9bf9" formatted="false">Riposa qualche minuto e registra la misurazione in Mi Tensión.</string>
+    <string name="s_780e21e4" formatted="false">Salva promemoria</string>
+    <string name="s_645478a6" formatted="false">Promemoria salvati.</string>
+    <string name="s_1fb58fbe" formatted="false">Apri impostazioni notifiche</string>
+    <string name="s_d8b872b9" formatted="false">Informazioni</string>
+    <string name="s_b8d7f7ff" formatted="false">I promemoria sono programmati su questo Android senza inviare dati a server. Funzionano anche con l’app chiusa.</string>
+    <string name="s_4afc7f19" formatted="false">Devi consentire le notifiche. La modalità Full immersion e le impostazioni audio possono silenziare o ritardare i promemoria.</string>
+    <string name="s_469a8ee6" formatted="false">Sono promemoria, non allarmi medici: non rilevano valori di pressione né sostituiscono le indicazioni del medico.</string>
+    <string name="s_ee47328c" formatted="false">Tocca Salva promemoria per applicare le modifiche. Disattiva entrambi e salva per annullarli.</string>
+    <string name="s_781981f3" formatted="false">Chiudi</string>
+    <string name="s_b144c5a0" formatted="false">Attiva promemoria</string>
+    <string name="s_226996" formatted="false">Ora</string>
+    <string name="s_2d1420aa" formatted="false">Giorni della settimana</string>
+    <string name="s_13cbf" formatted="false">Altro</string>
+    <string name="s_e3bad0bc" formatted="false">Grafici</string>
+    <string name="s_54ae2459" formatted="false">I tuoi dati a colpo d’occhio</string>
+    <string name="s_8df2f87e" formatted="false">Osserva le misurazioni nel tempo.</string>
+    <string name="s_46c7fc4" formatted="false">Media</string>
+    <string name="s_96a4d5de" formatted="false">La tua routine quotidiana</string>
+    <string name="s_691572bd" formatted="false">Guida, promemoria e dati in un unico posto.</string>
+    <string name="s_3ee268c9" formatted="false">Scegli orari e giorni.</string>
+    <string name="s_660a5f6" formatted="false">Come misurare e proteggere i dati.</string>
+    <string name="s_e40e17fd" formatted="false">Esporta in Excel</string>
+    <string name="s_f8b4e9c8" formatted="false">Tutte le misurazioni in un foglio di calcolo.</string>
+    <string name="s_9373a6ee" formatted="false">Conserva e ripristina lo storico.</string>
+    <string name="s_13bb6c38" formatted="false">Note e identificativo univoco</string>
+    <string name="s_629e024a" formatted="false">Crea file Excel</string>
+    <string name="s_5dc799e1" formatted="false">Impossibile esportare il file.</string>
+    <string name="s_47f5e25" formatted="false">Note</string>
+    <string name="s_3848b42e" formatted="false">Prova promemoria tra 10 secondi</string>
+    <string name="s_541915a6" formatted="false">Promemoria di prova programmato.</string>
+    <string name="s_8df6a8a9" formatted="false">Promemoria programmati: %ld</string>
+    <string name="s_c5861815" formatted="false">Nascondi questo avviso</string>
+    <string name="s_47ddbb91" formatted="false">Non verrà più mostrato su questo Android. Le misurazioni vengono conservate.</string>
+    <string name="s_47f2d038" formatted="false">Farmaci di questa misurazione</string>
+    <string name="s_62bfb41c" formatted="false">Registra i farmaci associati a questa misurazione. È un registro, non un consiglio terapeutico.</string>
+    <string name="s_954a93aa" formatted="false">Nome del farmaco</string>
+    <string name="s_52d3bede" formatted="false">Dose (facoltativa)</string>
+    <string name="s_9471bd41" formatted="false">Nota sul farmaco (facoltativa)</string>
+    <string name="s_a8a355b2" formatted="false">Aggiungi farmaco</string>
+    <string name="s_7ad13536" formatted="false">Rimuovi farmaco</string>
+    <string name="s_deeaa6fd" formatted="false">Inserisci il nome del farmaco o rimuovi la riga vuota.</string>
+    <string name="s_52eba893" formatted="false">Nessuna misurazione</string>
+    <string name="s_5553b215" formatted="false">Misurazione molto elevata</string>
+    <string name="s_7a8aff97" formatted="false">Rimuovi farmaco</string>
+    <string name="s_a5e1cd61" formatted="false">Controlla i valori.</string>
+    <string name="s_28cba5b9" formatted="false">Salva misurazione</string>
+    <string name="s_e6d0b2d8" formatted="false">Precedente</string>
+    <string name="s_c3cb755f" formatted="false">Successivo</string>
+    <string name="s_e65c61dc" formatted="false">Allarme sonoro</string>
+    <string name="s_54962ea7" formatted="false">Ferma allarme</string>
+    <string name="s_c7dea4d6" formatted="false">Impostazioni salvate</string>
+    <string name="s_b2ba5380" formatted="false">Permesso per allarmi esatti</string>
+    <string name="s_a4ee1fce" formatted="false">Dopo 30 minuti riceverai un altro avviso se non hai salvato una misurazione per quel giorno e periodo.</string>
+    <string name="s_3cab47ad" formatted="false">Senza permesso per allarmi esatti, Android può ritardare gli avvisi. Gli allarmi sonori richiedono questo permesso.</string>
+    <string name="s_15a668fc" formatted="false">I riferimenti sono orientativi per adulti, non diagnosi né obiettivi personali. Non valgono in gravidanza o per minori.</string>
+</resources>

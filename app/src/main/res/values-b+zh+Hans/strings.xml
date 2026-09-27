@@ -1,0 +1,213 @@
+<resources>
+    <string name="s_ead3a493">打印</string>
+    <string name="app_name">Mi Tensión</string>
+    <string name="s_1afbfccf" formatted="false">文件格式</string>
+    <string name="s_deb1c628" formatted="false">列</string>
+    <string name="s_a69b6ee9" formatted="false">使用 Mi Tensión 导出的 Excel (.xlsx) 作为模板。保留第一行和列顺序；不要使用公式。</string>
+    <string name="s_16d098e2" formatted="false">从第二行起，每行是一条独立测量。每天可导入1、2或3条早间或晚间测量；不会取平均值，也无需凑足三条。</string>
+    <string name="s_e993def4" formatted="false">早晚按本地日期和时间自动分类：14:00之前为早间，14:00起为晚间。B列不会改变此分类。</string>
+    <string name="s_f955df66" formatted="false">A、C、D、G为必填。A必须是Excel日期时间值，而非文本；C、D是无单位的整数。E、F、H可以留空。</string>
+    <string name="s_3526c142" formatted="false">G是测量的唯一UUID：保留它以避免重复，新测量需使用不同UUID。I、J、K是隐藏技术列；不要修改或将其值复制到新测量。</string>
+    <string name="s_d9dc4ecc" formatted="false">双指缩放或轻点两次以放大。</string>
+    <string name="s_d4b1d477" formatted="false">轻点以放大图片。</string>
+    <string name="s_4d5c2d62" formatted="false">从Excel导入记录</string>
+    <string name="s_bd37a5c3" formatted="false">请选择Mi Tensión导出的Excel文件。将添加新记录，不会删除历史或重复测量。</string>
+    <string name="s_d8215a28" formatted="false">无法导入Excel。请使用Mi Tensión导出的含有效记录的文件。</string>
+    <string name="s_ef3d37a3" formatted="false">已安排的第二次提醒：%ld</string>
+    <string name="s_7ba6fa8a" formatted="false">已过30分钟，您尚未保存此时段的测量。请在方便时记录。</string>
+    <string name="s_6afcd43b" formatted="false">无法更新第二次提醒。请检查通知权限并重新打开提醒设置。</string>
+    <string name="s_19bc8f2c" formatted="false">如果未保存当天该时段的测量，将在30分钟后收到第二次有声通知。仅重复一次。预先安排未来21天的提醒，并在打开应用时更新；请至少每三周打开一次 Mi Tensión。系统闹钟不会重复。</string>
+    <string name="s_dc5f854f" formatted="false">打开闹钟设置</string>
+    <string name="s_2bcf547a" formatted="false">10秒后测试闹钟</string>
+    <string name="s_a1e8ec34" formatted="false">测试闹钟已设置。</string>
+    <string name="s_c80eac83" formatted="false">通知之外的声音闹钟</string>
+    <string name="s_18ecbd73" formatted="false">声音闹钟需要 Android 26 或更高版本。</string>
+    <string name="s_c044241a" formatted="false">设置已保存。请在设置中允许闹钟响铃。</string>
+    <string name="s_188f4d36" formatted="false">声音闹钟需要 Android 26 和闹钟权限。即使应用已关闭，也可以在静音或专注模式下响铃。如果只想接收通知，请关闭声音闹钟。</string>
+    <string name="s_3ebf14aa" formatted="false">上一个输入框</string>
+    <string name="s_69a94dcd" formatted="false">下一个输入框</string>
+    <string name="s_2e7572a5" formatted="false">收起键盘</string>
+    <string name="s_33f261b" formatted="false">设置已保存。请在系统设置中启用通知以接收提醒。</string>
+    <string name="s_6e99506c" formatted="false">保存会应用更改。关闭也会保存未保存的更改。没有通知权限时，设置会保留，但提醒不会显示。</string>
+    <string name="s_fc8b8ba4" formatted="false">测量次数</string>
+    <string name="s_5596cfde" formatted="false">1次测量</string>
+    <string name="s_c70fa2d7" formatted="false">3次测量</string>
+    <string name="s_c51cb22c" formatted="false">第%ld次测量</string>
+    <string name="s_b9b19c0d" formatted="false">每次测量分别保存。请输入每次测量的数值。</string>
+    <string name="s_474ab8c3" formatted="false">保存时按 Android 本地时间自动设置：14:00 前为早间，14:00 起为晚间。已保存的测量只能删除。</string>
+    <string name="s_dcae2004" formatted="false">续页</string>
+    <string name="s_31d56f75" formatted="false">无法读取历史记录。原始文件已保留；请先恢复文件，再保存新的测量。</string>
+    <string name="s_70e0bf52" formatted="false">收缩压（高压）</string>
+    <string name="s_71b6689a" formatted="false">舒张压（低压）</string>
+    <string name="s_657e10b6" formatted="false">高于参考值</string>
+    <string name="s_774e9b2c" formatted="false">低于参考值</string>
+    <string name="s_71502458" formatted="false">这些数值的含义</string>
+    <string name="s_adb167a4" formatted="false">收缩压是心脏收缩时的压力。舒张压是心跳之间的压力；“低压”不代表数值偏低。</string>
+    <string name="s_6dd12efc" formatted="false">成人家庭测量参考：收缩压达到135或舒张压达到85毫米汞柱。应评估多日平均值，而非单次读数。若反复出现，请咨询医护人员；不要自行调整药物。个人目标可能不同。不适用于儿童或孕期。</string>
+    <string name="s_7a8bd5e7" formatted="false">读数很高。如有胸痛、呼吸困难、无力或说话困难，请立即呼叫急救。无症状时，至少1分钟后复测；若仍然如此高，请尽快联系医护人员。</string>
+    <string name="s_a4a3d5c1" formatted="false">概览</string>
+    <string name="s_e58f1e54" formatted="false">历史</string>
+    <string name="s_906797ed" formatted="false">医生</string>
+    <string name="s_221aa2" formatted="false">指南</string>
+    <string name="s_3e44d7c" formatted="false">备份</string>
+    <string name="s_42578d50" formatted="false">保存新测量</string>
+    <string name="s_790dad76" formatted="false">保存</string>
+    <string name="s_fc82e84b" formatted="false">取消</string>
+    <string name="s_371ca486" formatted="false">新测量</string>
+    <string name="s_43918486" formatted="false">独立测量</string>
+    <string name="s_c60c1af6" formatted="false">此测量将具有唯一标识，并保存在此 Android 上。</string>
+    <string name="s_5d347db6" formatted="false">血压</string>
+    <string name="s_447d2917" formatted="false">收缩压</string>
+    <string name="s_a6d75871" formatted="false">舒张压</string>
+    <string name="s_8bf34eec" formatted="false">测量时间</string>
+    <string name="s_acd9564f" formatted="false">时段</string>
+    <string name="s_892b16f7" formatted="false">早晨</string>
+    <string name="s_47f1f1f" formatted="false">晚上</string>
+    <string name="s_568946e0" formatted="false">日期和时间</string>
+    <string name="s_378606e4" formatted="false">可选信息</string>
+    <string name="s_49e2b83" formatted="false">脉搏</string>
+    <string name="s_806e30c6" formatted="false">此次测量的备注</string>
+    <string name="s_284263a5" formatted="false">最多 140 个字符</string>
+    <string name="s_85510e1b" formatted="false">请输入 40 至 300 mmHg 的收缩压。</string>
+    <string name="s_a49d2120" formatted="false">舒张压须在 30 至 200 之间，并低于收缩压。</string>
+    <string name="s_a8611f3c" formatted="false">请输入每分钟 20 至 250 次的脉搏。</string>
+    <string name="s_67b7b448" formatted="false">无法在此 Android 上保存测量。请重试。</string>
+    <string name="s_4c6b4419" formatted="false">我的测量</string>
+    <string name="s_e2624268" formatted="false">保存在此 Android 上</string>
+    <string name="s_7ebcc62e" formatted="false">已保存在 Android 上</string>
+    <string name="s_30bfa70a" formatted="false">尚未保存测量</string>
+    <string name="s_28f0ab04" formatted="false">离线可用测量：%ld</string>
+    <string name="s_f04d29d4" formatted="false">最新测量</string>
+    <string name="s_a234b9c" formatted="false">轻点“保存新测量”以开始。</string>
+    <string name="s_f9cbd920" formatted="false">7 天平均值</string>
+    <string name="s_8a6ea3be" formatted="false">本周</string>
+    <string name="s_696c104" formatted="false">次测量</string>
+    <string name="s_b5a10508" formatted="false">趋势</string>
+    <string name="s_91079878" formatted="false">最近测量</string>
+    <string name="s_1a30c3e9" formatted="false">您的趋势将显示在这里</string>
+    <string name="s_954ebb58" formatted="false">保存至少两次测量。</string>
+    <string name="s_b3ca35d2" formatted="false">测量记录</string>
+    <string name="s_d62886b3" formatted="false">每张卡片代表一次独立测量</string>
+    <string name="s_3ac3daae" formatted="false">期间</string>
+    <string name="s_5fce7544" formatted="false">7 天</string>
+    <string name="s_ddba56de" formatted="false">30 天</string>
+    <string name="s_1b1fba64" formatted="false">90 天</string>
+    <string name="s_27dc66" formatted="false">全部</string>
+    <string name="s_4d3af1b" formatted="false">全部</string>
+    <string name="s_a5aaaf9c" formatted="false">无测量</string>
+    <string name="s_d87a9c23" formatted="false">保存您的第一次测量。</string>
+    <string name="s_f6cefbab" formatted="false">删除此测量？</string>
+    <string name="s_27eecca9" formatted="false">永久删除</string>
+    <string name="s_97f2a6d" formatted="false">此测量将从 Android 的本地存储中删除。</string>
+    <string name="s_dfe6134e" formatted="false">删除测量</string>
+    <string name="s_612b1c06" formatted="false">此 Android 上保存的测量：%ld</string>
+    <string name="s_cb3488e0" formatted="false">此期间无测量</string>
+    <string name="s_539710d2" formatted="false">医疗报告</string>
+    <string name="s_ee662eb0" formatted="false">测量</string>
+    <string name="s_c87dc585" formatted="false">平均值</string>
+    <string name="s_7125c2f8" formatted="false">无测量</string>
+    <string name="s_1be0282e" formatted="false">此期间无数据。</string>
+    <string name="s_d5f27807" formatted="false">分享或打印</string>
+    <string name="s_47a26b54" formatted="false">最近 %ld 天</string>
+    <string name="s_967d22b4" formatted="false">完整历史</string>
+    <string name="s_1a369" formatted="false">次/分</string>
+    <string name="s_5231ae75" formatted="false">备份</string>
+    <string name="s_d584bd65" formatted="false">在“文件”、iCloud 云盘或您偏好的服务中保存测量副本。</string>
+    <string name="s_ecdde7b9" formatted="false">创建并分享备份</string>
+    <string name="s_304f4272" formatted="false">从备份恢复</string>
+    <string name="s_5f2dfd59" formatted="false">内容</string>
+    <string name="s_6179e5d7" formatted="false">上次备份</string>
+    <string name="s_db062cc9" formatted="false">备份包含健康数据。请妥善保管，仅与可信任的人分享。</string>
+    <string name="s_909153e3" formatted="false">备份与恢复</string>
+    <string name="s_4f1d1d94" formatted="false">已恢复测量：%ld</string>
+    <string name="s_549e3fde" formatted="false">无法读取此备份。</string>
+    <string name="s_2ce323c2" formatted="false">备份创建成功。</string>
+    <string name="s_aed0fc3" formatted="false">无法创建备份。</string>
+    <string name="s_db201bd4" formatted="false">指南与隐私</string>
+    <string name="s_b1b0cb8e" formatted="false">如何测量血压</string>
+    <string name="s_5f56ebdd" formatted="false">准备血压计</string>
+    <string name="s_7c829133" formatted="false">使用经过验证的上臂式血压计和合适尺寸的袖带。本应用记录设备的测量值。</string>
+    <string name="s_5778ea1" formatted="false">测量前</string>
+    <string name="s_d9208800" formatted="false">测量前 30 分钟避免运动、吸烟和咖啡因。排空膀胱。</string>
+    <string name="s_85e87776" formatted="false">休息 5 分钟</string>
+    <string name="s_3e61eef1" formatted="false">安静坐好，背部有支撑，双脚平放地面，双腿不要交叉。</string>
+    <string name="s_9ee49f60" formatted="false">放好手臂</string>
+    <string name="s_bce0d3dc" formatted="false">按照设备说明将袖带套在裸露的皮肤上。将手臂支撑在心脏高度。</string>
+    <string name="s_7351154d" formatted="false">测量两次</string>
+    <string name="s_a38f8d7f" formatted="false">不要说话或移动。两次测量之间至少等待 1 分钟，并分别保存每次测量。</string>
+    <string name="s_996169f1" formatted="false">遵循医嘱</string>
+    <string name="s_7bdf6efa" formatted="false">在医务人员建议的时间测量，并在就诊时携带报告。</string>
+    <string name="s_f5d01df6" formatted="false">来源：American Heart Association</string>
+    <string name="s_f3051bee" formatted="false">您的隐私</string>
+    <string name="s_ea1c8dca" formatted="false">我们不在服务器上存储数据</string>
+    <string name="s_96f4866e" formatted="false">您的测量和备注仅保存在此 Android 上，供您查看历史记录。本应用无需账户，也不会将测量发送到我们的服务器。</string>
+    <string name="s_3c612b37" formatted="false">是否导出或分享报告或备份由您决定。根据您的 Android 设置，设备备份可能包含应用数据。</string>
+    <string name="s_cfff210d" formatted="false">删除应用可能清除本地历史记录。如需保留，请导出备份。</string>
+    <string name="s_8d841cb6" formatted="false">监测报告 · %@</string>
+    <string name="s_818ba723" formatted="false">生成于 %@</string>
+    <string name="s_5ea6d1ca" formatted="false">测量值由用户输入。本报告不能替代临床评估。</string>
+    <string name="s_409d75d" formatted="false">日期</string>
+    <string name="s_4c1415c" formatted="false">系列</string>
+    <string name="s_2c85466e" formatted="false">提醒</string>
+    <string name="s_139ed330" formatted="false">测量提醒</string>
+    <string name="s_c411130e" formatted="false">选择早晚提醒的时间和日期。提醒默认关闭。</string>
+    <string name="s_5cdc1c7e" formatted="false">请至少选择一天。</string>
+    <string name="s_ba1a9a23" formatted="false">请在设置中启用通知以接收提醒。</string>
+    <string name="s_4c085815" formatted="false">该测量血压了</string>
+    <string name="s_1c0e9bf9" formatted="false">休息几分钟，然后在 Mi Tensión 中记录测量结果。</string>
+    <string name="s_780e21e4" formatted="false">保存提醒</string>
+    <string name="s_645478a6" formatted="false">提醒已保存。</string>
+    <string name="s_1fb58fbe" formatted="false">打开通知设置</string>
+    <string name="s_d8b872b9" formatted="false">信息</string>
+    <string name="s_b8d7f7ff" formatted="false">提醒在此 Android 上安排，不会向服务器发送数据。即使应用关闭也能工作。</string>
+    <string name="s_4afc7f19" formatted="false">必须允许通知。专注模式和声音设置可能使提醒静音或延迟。</string>
+    <string name="s_469a8ee6" formatted="false">这些是提醒，不是医疗警报：不会检测血压值，也不能替代医生的指导。</string>
+    <string name="s_ee47328c" formatted="false">点击“保存提醒”应用更改。关闭两个提醒并保存即可取消。</string>
+    <string name="s_781981f3" formatted="false">关闭</string>
+    <string name="s_b144c5a0" formatted="false">启用提醒</string>
+    <string name="s_226996" formatted="false">时间</string>
+    <string name="s_2d1420aa" formatted="false">星期</string>
+    <string name="s_13cbf" formatted="false">更多</string>
+    <string name="s_e3bad0bc" formatted="false">图表</string>
+    <string name="s_54ae2459" formatted="false">数据一目了然</string>
+    <string name="s_8df2f87e" formatted="false">查看测量数据随时间的变化。</string>
+    <string name="s_46c7fc4" formatted="false">平均值</string>
+    <string name="s_96a4d5de" formatted="false">日常管理</string>
+    <string name="s_691572bd" formatted="false">指南、提醒和数据，尽在一处。</string>
+    <string name="s_3ee268c9" formatted="false">设置时间和日期。</string>
+    <string name="s_660a5f6" formatted="false">如何测量及保护数据。</string>
+    <string name="s_e40e17fd" formatted="false">导出到 Excel</string>
+    <string name="s_f8b4e9c8" formatted="false">将所有测量结果保存到电子表格。</string>
+    <string name="s_9373a6ee" formatted="false">保存和恢复历史记录。</string>
+    <string name="s_13bb6c38" formatted="false">备注及唯一标识符</string>
+    <string name="s_629e024a" formatted="false">创建 Excel 文件</string>
+    <string name="s_5dc799e1" formatted="false">无法导出文件。</string>
+    <string name="s_47f5e25" formatted="false">备注</string>
+    <string name="s_3848b42e" formatted="false">10 秒后测试提醒</string>
+    <string name="s_541915a6" formatted="false">测试提醒已安排。</string>
+    <string name="s_8df6a8a9" formatted="false">已安排的提醒：%ld</string>
+    <string name="s_c5861815" formatted="false">隐藏此提示</string>
+    <string name="s_47ddbb91" formatted="false">此提示将不再在此 Android 上显示。测量记录会保留。</string>
+    <string name="s_47f2d038" formatted="false">此次测量的药物</string>
+    <string name="s_62bfb41c" formatted="false">记录与此次测量相关的药物。这是记录，不是治疗建议。</string>
+    <string name="s_954a93aa" formatted="false">药物名称</string>
+    <string name="s_52d3bede" formatted="false">剂量（可选）</string>
+    <string name="s_9471bd41" formatted="false">药物备注（可选）</string>
+    <string name="s_a8a355b2" formatted="false">添加药物</string>
+    <string name="s_7ad13536" formatted="false">移除药物</string>
+    <string name="s_deeaa6fd" formatted="false">请输入药物名称或移除空白行。</string>
+    <string name="s_52eba893" formatted="false">暂无测量</string>
+    <string name="s_5553b215" formatted="false">测量值非常高</string>
+    <string name="s_7a8aff97" formatted="false">删除药物</string>
+    <string name="s_a5e1cd61" formatted="false">请检查测量值。</string>
+    <string name="s_28cba5b9" formatted="false">保存测量</string>
+    <string name="s_e6d0b2d8" formatted="false">上一个</string>
+    <string name="s_c3cb755f" formatted="false">下一个</string>
+    <string name="s_e65c61dc" formatted="false">声音闹钟</string>
+    <string name="s_54962ea7" formatted="false">停止闹钟</string>
+    <string name="s_c7dea4d6" formatted="false">设置已保存</string>
+    <string name="s_b2ba5380" formatted="false">精确闹钟权限</string>
+    <string name="s_a4ee1fce" formatted="false">如果当天该时段没有保存测量，30分钟后会再次提醒。</string>
+    <string name="s_3cab47ad" formatted="false">没有精确闹钟权限时，Android可能延迟提醒。声音闹钟需要此权限。</string>
+    <string name="s_15a668fc" formatted="false">参考值仅供成人参考，不是诊断或个人目标。不适用于孕期或儿童。</string>
+</resources>

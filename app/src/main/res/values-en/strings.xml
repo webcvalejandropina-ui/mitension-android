@@ -1,0 +1,213 @@
+<resources>
+    <string name="s_ead3a493">Print</string>
+    <string name="app_name">Mi Tensión</string>
+    <string name="s_1afbfccf" formatted="false">File format</string>
+    <string name="s_deb1c628" formatted="false">Columns</string>
+    <string name="s_a69b6ee9" formatted="false">Use the Excel (.xlsx) exported by Mi Tensión as a template. Keep the first row and column order; do not use formulas.</string>
+    <string name="s_16d098e2" formatted="false">Each row from the second onward is a separate reading. Import 1, 2 or 3 morning or evening readings per day; they are not averaged and three are not required.</string>
+    <string name="s_e993def4" formatted="false">Morning and evening are calculated from local date and time: before 14:00 is morning; from 14:00 is evening. Column B does not override this.</string>
+    <string name="s_f955df66" formatted="false">A, C, D and G are required. A must be an Excel date/time, not text; C and D are whole numbers without units. E, F and H may be empty.</string>
+    <string name="s_3526c142" formatted="false">G identifies each reading: keep its UUID to avoid duplicates and use a different UUID for a new reading. I, J and K are hidden technical columns; do not edit them or copy their values to new readings.</string>
+    <string name="s_d9dc4ecc" formatted="false">Pinch or double-tap to zoom.</string>
+    <string name="s_d4b1d477" formatted="false">Tap to enlarge the image.</string>
+    <string name="s_4d5c2d62" formatted="false">Import records from Excel</string>
+    <string name="s_bd37a5c3" formatted="false">Choose an Excel file exported by Mi Tensión. New records are added without deleting your history or duplicating readings.</string>
+    <string name="s_d8215a28" formatted="false">Could not import Excel. Use a file exported by Mi Tensión with valid records.</string>
+    <string name="s_ef3d37a3" formatted="false">Second reminders scheduled: %ld</string>
+    <string name="s_7ba6fa8a" formatted="false">30 minutes have passed and you have not saved a reading for this period. Record it when you can.</string>
+    <string name="s_6afcd43b" formatted="false">The second reminder could not be updated. Check notification permissions and reopen Reminders.</string>
+    <string name="s_19bc8f2c" formatted="false">If no reading is saved for that day and period, a second notification with sound arrives 30 minutes later. It repeats only once. The next 21 days are scheduled and renewed when you open the app; open Mi Tensión at least every three weeks. The system alarm does not repeat.</string>
+    <string name="s_dc5f854f" formatted="false">Open alarm settings</string>
+    <string name="s_2bcf547a" formatted="false">Test alarm in 10 seconds</string>
+    <string name="s_a1e8ec34" formatted="false">Test alarm scheduled.</string>
+    <string name="s_c80eac83" formatted="false">Audible alarm in addition to notification</string>
+    <string name="s_18ecbd73" formatted="false">Audible alarms are available on Android 26 or later.</string>
+    <string name="s_c044241a" formatted="false">Settings saved. Allow alarms in Settings for them to ring.</string>
+    <string name="s_188f4d36" formatted="false">Audible alarms require Android 26 and alarm permission. They can ring in Silent or Focus mode, even with the app closed. Turn them off if you prefer notifications only.</string>
+    <string name="s_3ebf14aa" formatted="false">Previous field</string>
+    <string name="s_69a94dcd" formatted="false">Next field</string>
+    <string name="s_2e7572a5" formatted="false">Dismiss keyboard</string>
+    <string name="s_33f261b" formatted="false">Settings saved. Enable notifications in Settings to receive reminders.</string>
+    <string name="s_6e99506c" formatted="false">Save applies changes. Close also saves pending changes. Without notification permission, settings are retained but reminders will not appear.</string>
+    <string name="s_fc8b8ba4" formatted="false">Number of readings</string>
+    <string name="s_5596cfde" formatted="false">1 reading</string>
+    <string name="s_c70fa2d7" formatted="false">3 readings</string>
+    <string name="s_c51cb22c" formatted="false">Reading %ld</string>
+    <string name="s_b9b19c0d" formatted="false">Each reading is saved separately. Enter the values for each measurement.</string>
+    <string name="s_474ab8c3" formatted="false">Assigned automatically when saved using the Android’s local time: morning before 14:00 and evening from 14:00. Saved readings can only be deleted.</string>
+    <string name="s_dcae2004" formatted="false">Continued</string>
+    <string name="s_31d56f75" formatted="false">The history could not be read. The original file is preserved; recover it before saving new readings.</string>
+    <string name="s_70e0bf52" formatted="false">Systolic (upper)</string>
+    <string name="s_71b6689a" formatted="false">Diastolic (lower)</string>
+    <string name="s_657e10b6" formatted="false">Above reference</string>
+    <string name="s_774e9b2c" formatted="false">Below reference</string>
+    <string name="s_71502458" formatted="false">What these values mean</string>
+    <string name="s_adb167a4" formatted="false">Systolic is pressure when the heart contracts. Diastolic is pressure between beats; “lower” does not mean the value is low.</string>
+    <string name="s_6dd12efc" formatted="false">Adult home reference: systolic 135 or above, or diastolic 85 or above (mmHg). Assess the average over several days, not a single reading. If repeated, consult a clinician; do not change medication yourself. Your targets may differ. Not for children or pregnancy.</string>
+    <string name="s_7a8bd5e7" formatted="false">Very high reading. With chest pain, shortness of breath, weakness or trouble speaking, call emergency services immediately. Without symptoms, repeat after at least 1 minute; if still this high, contact a clinician as soon as possible.</string>
+    <string name="s_a4a3d5c1" formatted="false">Overview</string>
+    <string name="s_e58f1e54" formatted="false">History</string>
+    <string name="s_906797ed" formatted="false">Doctor</string>
+    <string name="s_221aa2" formatted="false">Guide</string>
+    <string name="s_3e44d7c" formatted="false">Backup</string>
+    <string name="s_42578d50" formatted="false">Save new reading</string>
+    <string name="s_790dad76" formatted="false">Save</string>
+    <string name="s_fc82e84b" formatted="false">Cancel</string>
+    <string name="s_371ca486" formatted="false">New reading</string>
+    <string name="s_43918486" formatted="false">Individual reading</string>
+    <string name="s_c60c1af6" formatted="false">This reading will have a unique identifier and be saved on this Android.</string>
+    <string name="s_5d347db6" formatted="false">Blood pressure</string>
+    <string name="s_447d2917" formatted="false">Systolic</string>
+    <string name="s_a6d75871" formatted="false">Diastolic</string>
+    <string name="s_8bf34eec" formatted="false">Reading time</string>
+    <string name="s_acd9564f" formatted="false">Time of day</string>
+    <string name="s_892b16f7" formatted="false">Morning</string>
+    <string name="s_47f1f1f" formatted="false">Evening</string>
+    <string name="s_568946e0" formatted="false">Date and time</string>
+    <string name="s_378606e4" formatted="false">Optional details</string>
+    <string name="s_49e2b83" formatted="false">Pulse</string>
+    <string name="s_806e30c6" formatted="false">Note for this reading</string>
+    <string name="s_284263a5" formatted="false">Up to 140 characters</string>
+    <string name="s_85510e1b" formatted="false">Enter a systolic pressure between 40 and 300 mmHg.</string>
+    <string name="s_a49d2120" formatted="false">Diastolic pressure must be between 30 and 200 and lower than systolic pressure.</string>
+    <string name="s_a8611f3c" formatted="false">Enter a pulse between 20 and 250 bpm.</string>
+    <string name="s_67b7b448" formatted="false">Could not save this reading on this Android. Try again.</string>
+    <string name="s_4c6b4419" formatted="false">My readings</string>
+    <string name="s_e2624268" formatted="false">Saved on this Android</string>
+    <string name="s_7ebcc62e" formatted="false">Saved on Android</string>
+    <string name="s_30bfa70a" formatted="false">No readings saved yet</string>
+    <string name="s_28f0ab04" formatted="false">Readings available offline: %ld</string>
+    <string name="s_f04d29d4" formatted="false">LATEST READING</string>
+    <string name="s_a234b9c" formatted="false">Tap “Save new reading” to get started.</string>
+    <string name="s_f9cbd920" formatted="false">7-DAY AVERAGE</string>
+    <string name="s_8a6ea3be" formatted="false">THIS WEEK</string>
+    <string name="s_696c104" formatted="false">readings</string>
+    <string name="s_b5a10508" formatted="false">TREND</string>
+    <string name="s_91079878" formatted="false">Recent readings</string>
+    <string name="s_1a30c3e9" formatted="false">Your trend will appear here</string>
+    <string name="s_954ebb58" formatted="false">Save two or more readings.</string>
+    <string name="s_b3ca35d2" formatted="false">Reading log</string>
+    <string name="s_d62886b3" formatted="false">Each card is a separate reading</string>
+    <string name="s_3ac3daae" formatted="false">Period</string>
+    <string name="s_5fce7544" formatted="false">7 days</string>
+    <string name="s_ddba56de" formatted="false">30 days</string>
+    <string name="s_1b1fba64" formatted="false">90 days</string>
+    <string name="s_27dc66" formatted="false">All</string>
+    <string name="s_4d3af1b" formatted="false">All</string>
+    <string name="s_a5aaaf9c" formatted="false">No readings</string>
+    <string name="s_d87a9c23" formatted="false">Save your first reading.</string>
+    <string name="s_f6cefbab" formatted="false">Delete this reading?</string>
+    <string name="s_27eecca9" formatted="false">Delete permanently</string>
+    <string name="s_97f2a6d" formatted="false">The reading will be deleted from this Android\'s local storage.</string>
+    <string name="s_dfe6134e" formatted="false">Delete reading</string>
+    <string name="s_612b1c06" formatted="false">Readings saved on this Android: %ld</string>
+    <string name="s_cb3488e0" formatted="false">No readings in this period</string>
+    <string name="s_539710d2" formatted="false">Medical report</string>
+    <string name="s_ee662eb0" formatted="false">Readings</string>
+    <string name="s_c87dc585" formatted="false">Average</string>
+    <string name="s_7125c2f8" formatted="false">No readings</string>
+    <string name="s_1be0282e" formatted="false">No data for this period.</string>
+    <string name="s_d5f27807" formatted="false">Share or print</string>
+    <string name="s_47a26b54" formatted="false">Last %ld days</string>
+    <string name="s_967d22b4" formatted="false">Full history</string>
+    <string name="s_1a369" formatted="false">bpm</string>
+    <string name="s_5231ae75" formatted="false">Backup</string>
+    <string name="s_d584bd65" formatted="false">Save a copy of your readings in Files, iCloud Drive or your preferred service.</string>
+    <string name="s_ecdde7b9" formatted="false">Create and share backup</string>
+    <string name="s_304f4272" formatted="false">Restore from backup</string>
+    <string name="s_5f2dfd59" formatted="false">Contents</string>
+    <string name="s_6179e5d7" formatted="false">Last backup</string>
+    <string name="s_db062cc9" formatted="false">The backup contains health data. Keep it private and share it only with people you trust.</string>
+    <string name="s_909153e3" formatted="false">Backup and restore</string>
+    <string name="s_4f1d1d94" formatted="false">Readings restored: %ld</string>
+    <string name="s_549e3fde" formatted="false">Could not read this backup.</string>
+    <string name="s_2ce323c2" formatted="false">Backup created successfully.</string>
+    <string name="s_aed0fc3" formatted="false">Could not create backup.</string>
+    <string name="s_db201bd4" formatted="false">Guide and privacy</string>
+    <string name="s_b1b0cb8e" formatted="false">How to measure blood pressure</string>
+    <string name="s_5f56ebdd" formatted="false">Prepare your monitor</string>
+    <string name="s_7c829133" formatted="false">Use a validated upper-arm monitor with a cuff that fits. This app records the monitor\'s readings.</string>
+    <string name="s_5778ea1" formatted="false">Before measuring</string>
+    <string name="s_d9208800" formatted="false">Avoid exercise, tobacco and caffeine for 30 minutes beforehand. Empty your bladder.</string>
+    <string name="s_85e87776" formatted="false">Rest for 5 minutes</string>
+    <string name="s_3e61eef1" formatted="false">Sit quietly with your back supported, feet on the floor and legs uncrossed.</string>
+    <string name="s_9ee49f60" formatted="false">Position your arm</string>
+    <string name="s_bce0d3dc" formatted="false">Place the cuff on bare skin following the monitor\'s instructions. Support your arm at heart level.</string>
+    <string name="s_7351154d" formatted="false">Take two readings</string>
+    <string name="s_a38f8d7f" formatted="false">Do not talk or move. Wait at least 1 minute between readings and save each one separately.</string>
+    <string name="s_996169f1" formatted="false">Follow your care plan</string>
+    <string name="s_7bdf6efa" formatted="false">Measure at the times recommended by your healthcare professional and bring the report to your appointment.</string>
+    <string name="s_f5d01df6" formatted="false">Source: American Heart Association</string>
+    <string name="s_f3051bee" formatted="false">Your privacy</string>
+    <string name="s_ea1c8dca" formatted="false">We do not store data on servers</string>
+    <string name="s_96f4866e" formatted="false">Your readings and notes are saved only on this Android so you can review your history. The app does not require an account or send your readings to our servers.</string>
+    <string name="s_3c612b37" formatted="false">You decide whether to export or share a report or backup. Device backups may include app data depending on your Android settings.</string>
+    <string name="s_cfff210d" formatted="false">Deleting the app may erase local history. Export a backup to keep it.</string>
+    <string name="s_8d841cb6" formatted="false">Monitoring report · %@</string>
+    <string name="s_818ba723" formatted="false">Generated on %@</string>
+    <string name="s_5ea6d1ca" formatted="false">Readings were entered by the user. This report does not replace a clinical assessment.</string>
+    <string name="s_409d75d" formatted="false">Date</string>
+    <string name="s_4c1415c" formatted="false">Series</string>
+    <string name="s_2c85466e" formatted="false">Reminders</string>
+    <string name="s_139ed330" formatted="false">Reading reminders</string>
+    <string name="s_c411130e" formatted="false">Choose times and days for morning and evening. Reminders are initially off.</string>
+    <string name="s_5cdc1c7e" formatted="false">Select at least one day.</string>
+    <string name="s_ba1a9a23" formatted="false">Enable notifications in Settings to receive reminders.</string>
+    <string name="s_4c085815" formatted="false">Time to measure your blood pressure</string>
+    <string name="s_1c0e9bf9" formatted="false">Rest for a few minutes and record your reading in Mi Tensión.</string>
+    <string name="s_780e21e4" formatted="false">Save reminders</string>
+    <string name="s_645478a6" formatted="false">Reminders saved.</string>
+    <string name="s_1fb58fbe" formatted="false">Open notification settings</string>
+    <string name="s_d8b872b9" formatted="false">Information</string>
+    <string name="s_b8d7f7ff" formatted="false">Reminders are scheduled on this Android without sending data to servers. They work even when the app is closed.</string>
+    <string name="s_4afc7f19" formatted="false">You must allow notifications. Focus mode and sound settings may silence or delay reminders.</string>
+    <string name="s_469a8ee6" formatted="false">These are reminders, not medical alarms: they do not detect blood pressure values or replace your doctor\'s instructions.</string>
+    <string name="s_ee47328c" formatted="false">Tap Save reminders to apply changes. Turn both reminders off and save to cancel them.</string>
+    <string name="s_781981f3" formatted="false">Close</string>
+    <string name="s_b144c5a0" formatted="false">Enable reminder</string>
+    <string name="s_226996" formatted="false">Time</string>
+    <string name="s_2d1420aa" formatted="false">Days of the week</string>
+    <string name="s_13cbf" formatted="false">More</string>
+    <string name="s_e3bad0bc" formatted="false">Charts</string>
+    <string name="s_54ae2459" formatted="false">Your data at a glance</string>
+    <string name="s_8df2f87e" formatted="false">See your readings over time.</string>
+    <string name="s_46c7fc4" formatted="false">Average</string>
+    <string name="s_96a4d5de" formatted="false">Your daily routine</string>
+    <string name="s_691572bd" formatted="false">Guidance, reminders and your data in one place.</string>
+    <string name="s_3ee268c9" formatted="false">Choose your times and days.</string>
+    <string name="s_660a5f6" formatted="false">How to measure and protect your data.</string>
+    <string name="s_e40e17fd" formatted="false">Export to Excel</string>
+    <string name="s_f8b4e9c8" formatted="false">All your readings in a spreadsheet.</string>
+    <string name="s_9373a6ee" formatted="false">Keep and restore your history.</string>
+    <string name="s_13bb6c38" formatted="false">Notes and unique identifier</string>
+    <string name="s_629e024a" formatted="false">Create Excel file</string>
+    <string name="s_5dc799e1" formatted="false">Unable to export the file.</string>
+    <string name="s_47f5e25" formatted="false">Notes</string>
+    <string name="s_3848b42e" formatted="false">Test reminder in 10 seconds</string>
+    <string name="s_541915a6" formatted="false">Test reminder scheduled.</string>
+    <string name="s_8df6a8a9" formatted="false">Scheduled reminders: %ld</string>
+    <string name="s_c5861815" formatted="false">Hide this notice</string>
+    <string name="s_47ddbb91" formatted="false">It will not appear again on this Android. Your readings are kept.</string>
+    <string name="s_47f2d038" formatted="false">Medication for this reading</string>
+    <string name="s_62bfb41c" formatted="false">Record medication associated with this reading. This is a record, not treatment advice.</string>
+    <string name="s_954a93aa" formatted="false">Medication name</string>
+    <string name="s_52d3bede" formatted="false">Dose (optional)</string>
+    <string name="s_9471bd41" formatted="false">Medication note (optional)</string>
+    <string name="s_a8a355b2" formatted="false">Add medication</string>
+    <string name="s_7ad13536" formatted="false">Remove medication</string>
+    <string name="s_deeaa6fd" formatted="false">Enter a medication name or remove the empty row.</string>
+    <string name="s_52eba893" formatted="false">No readings yet</string>
+    <string name="s_5553b215" formatted="false">Very high reading</string>
+    <string name="s_7a8aff97" formatted="false">Remove medication</string>
+    <string name="s_a5e1cd61" formatted="false">Check the reading values.</string>
+    <string name="s_28cba5b9" formatted="false">Save reading</string>
+    <string name="s_e6d0b2d8" formatted="false">Previous</string>
+    <string name="s_c3cb755f" formatted="false">Next</string>
+    <string name="s_e65c61dc" formatted="false">Audible alarm</string>
+    <string name="s_54962ea7" formatted="false">Stop alarm</string>
+    <string name="s_c7dea4d6" formatted="false">Settings saved</string>
+    <string name="s_b2ba5380" formatted="false">Exact alarm permission</string>
+    <string name="s_a4ee1fce" formatted="false">After 30 minutes, another reminder appears if no reading was saved for that day and period.</string>
+    <string name="s_3cab47ad" formatted="false">Without exact alarm permission, Android may delay reminders. Audible alarms need this permission.</string>
+    <string name="s_15a668fc" formatted="false">References are adult guidance, not a diagnosis or personal target. They do not apply to pregnancy or children.</string>
+</resources>

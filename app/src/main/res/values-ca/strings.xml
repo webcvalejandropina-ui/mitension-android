@@ -1,0 +1,213 @@
+<resources>
+    <string name="s_ead3a493">Imprimeix</string>
+    <string name="app_name">Mi Tensión</string>
+    <string name="s_1afbfccf" formatted="false">Format del fitxer</string>
+    <string name="s_deb1c628" formatted="false">Columnes</string>
+    <string name="s_a69b6ee9" formatted="false">Fes servir l’Excel (.xlsx) exportat per Mi Tensión com a plantilla. Conserva la primera fila i l’ordre de les columnes; no facis servir fórmules.</string>
+    <string name="s_16d098e2" formatted="false">Cada fila des de la segona és una presa independent. Pots importar 1, 2 o 3 preses de matí o nit al dia; no es fa la mitjana ni cal completar-ne tres.</string>
+    <string name="s_e993def4" formatted="false">Matí i nit es calculen per la data i hora local: abans de les 14:00 és matí; des de les 14:00 és nit. La columna B no canvia la classificació.</string>
+    <string name="s_f955df66" formatted="false">A, C, D i G són obligatòries. A ha de ser una data i hora d’Excel, no text; C i D són enters sense unitats. E, F i H poden quedar buides.</string>
+    <string name="s_3526c142" formatted="false">G identifica la presa: conserva’n l’UUID per evitar duplicats i usa’n un de diferent per a una presa nova. I, J i K són columnes tècniques ocultes; no les modifiquis ni en copiïs els valors a preses noves.</string>
+    <string name="s_d9dc4ecc" formatted="false">Pessiga o toca dues vegades per ampliar.</string>
+    <string name="s_d4b1d477" formatted="false">Toca per ampliar la imatge.</string>
+    <string name="s_4d5c2d62" formatted="false">Importar registres d’Excel</string>
+    <string name="s_bd37a5c3" formatted="false">Selecciona un fitxer Excel exportat per Mi Tensión. S’afegeixen els registres nous sense esborrar l’històric ni duplicar preses.</string>
+    <string name="s_d8215a28" formatted="false">No s’ha pogut importar l’Excel. Utilitza un fitxer exportat per Mi Tensión amb registres vàlids.</string>
+    <string name="s_ef3d37a3" formatted="false">Segons avisos programats: %ld</string>
+    <string name="s_7ba6fa8a" formatted="false">Han passat 30 minuts i no has desat la presa d’aquest període. Registra-la quan puguis.</string>
+    <string name="s_6afcd43b" formatted="false">No s’ha pogut actualitzar el segon avís. Revisa els permisos de notificacions i torna a obrir Alertes.</string>
+    <string name="s_19bc8f2c" formatted="false">Si no deses una presa d’aquell dia i període, rebràs una segona notificació amb so 30 minuts després. Només es repeteix una vegada. Es preparen els pròxims 21 dies i es renoven en obrir l’app; obre Mi Tensión almenys cada tres setmanes. L’alarma del sistema no es repeteix.</string>
+    <string name="s_dc5f854f" formatted="false">Obrir configuració d’alarmes</string>
+    <string name="s_2bcf547a" formatted="false">Provar alarma en 10 segons</string>
+    <string name="s_a1e8ec34" formatted="false">Alarma de prova programada.</string>
+    <string name="s_c80eac83" formatted="false">Alarma sonora a més de la notificació</string>
+    <string name="s_18ecbd73" formatted="false">Les alarmes sonores estan disponibles des d’Android 26.</string>
+    <string name="s_c044241a" formatted="false">Configuració desada. Permet les alarmes a Configuració perquè sonin.</string>
+    <string name="s_188f4d36" formatted="false">L’alarma sonora requereix Android 26 i permís d’alarmes. Pot sonar en silenci o amb Concentració, encara que l’app estigui tancada. Desactiva-la si prefereixes només la notificació.</string>
+    <string name="s_3ebf14aa" formatted="false">Camp anterior</string>
+    <string name="s_69a94dcd" formatted="false">Camp següent</string>
+    <string name="s_2e7572a5" formatted="false">Tancar el teclat</string>
+    <string name="s_33f261b" formatted="false">Configuració desada. Activa les notificacions a Configuració per rebre avisos.</string>
+    <string name="s_6e99506c" formatted="false">Desar aplica els canvis. Tancar també desa els canvis pendents. Sense permís de notificacions, es conserva la configuració però no es mostren els avisos.</string>
+    <string name="s_fc8b8ba4" formatted="false">Nombre de preses</string>
+    <string name="s_5596cfde" formatted="false">1 presa</string>
+    <string name="s_c70fa2d7" formatted="false">3 preses</string>
+    <string name="s_c51cb22c" formatted="false">Presa %ld</string>
+    <string name="s_b9b19c0d" formatted="false">Cada presa es desa per separat. Introdueix els valors de cada mesurament.</string>
+    <string name="s_474ab8c3" formatted="false">S’assigna automàticament en desar segons l’hora local de l’Android: matí abans de les 14:00 i nit des de les 14:00. Una presa desada només es pot eliminar.</string>
+    <string name="s_dcae2004" formatted="false">Continuació</string>
+    <string name="s_31d56f75" formatted="false">No s’ha pogut llegir l’històric. Es conserva el fitxer original; recupera’l abans de desar noves preses.</string>
+    <string name="s_70e0bf52" formatted="false">Sistòlica (alta)</string>
+    <string name="s_71b6689a" formatted="false">Diastòlica (baixa)</string>
+    <string name="s_657e10b6" formatted="false">Per sobre de la referència</string>
+    <string name="s_774e9b2c" formatted="false">Per sota de la referència</string>
+    <string name="s_71502458" formatted="false">Què signifiquen aquests valors</string>
+    <string name="s_adb167a4" formatted="false">L’alta (sistòlica) és la pressió quan el cor es contrau. La baixa (diastòlica) és la pressió entre batecs; «baixa» no significa que el valor sigui baix.</string>
+    <string name="s_6dd12efc" formatted="false">Referència a casa per a adults: sistòlica des de 135 o diastòlica des de 85 mmHg. S’interpreta la mitjana de diversos dies, no una presa aïllada. Si es repeteix, consulta-ho; no canviïs la medicació pel teu compte. Els teus objectius poden variar. No s’aplica a menors ni a l’embaràs.</string>
+    <string name="s_7a8bd5e7" formatted="false">Lectura molt elevada. Amb dolor al pit, falta d’aire, debilitat o dificultat per parlar, truca a emergències sense esperar. Sense símptomes, repeteix després d’almenys 1 minut i, si segueix així, contacta al més aviat possible amb un professional sanitari.</string>
+    <string name="s_a4a3d5c1" formatted="false">Resum</string>
+    <string name="s_e58f1e54" formatted="false">Històric</string>
+    <string name="s_906797ed" formatted="false">Metge</string>
+    <string name="s_221aa2" formatted="false">Guia</string>
+    <string name="s_3e44d7c" formatted="false">Còpia</string>
+    <string name="s_42578d50" formatted="false">Desa una nova presa</string>
+    <string name="s_790dad76" formatted="false">Desa</string>
+    <string name="s_fc82e84b" formatted="false">Cancel·la</string>
+    <string name="s_371ca486" formatted="false">Nova presa</string>
+    <string name="s_43918486" formatted="false">Registre individual</string>
+    <string name="s_c60c1af6" formatted="false">Aquesta presa tindrà un identificador únic i es desarà en aquest Android.</string>
+    <string name="s_5d347db6" formatted="false">Pressió arterial</string>
+    <string name="s_447d2917" formatted="false">Sistòlica</string>
+    <string name="s_a6d75871" formatted="false">Diastòlica</string>
+    <string name="s_8bf34eec" formatted="false">Moment de la presa</string>
+    <string name="s_acd9564f" formatted="false">Moment</string>
+    <string name="s_892b16f7" formatted="false">Matí</string>
+    <string name="s_47f1f1f" formatted="false">Nit</string>
+    <string name="s_568946e0" formatted="false">Data i hora</string>
+    <string name="s_378606e4" formatted="false">Dades opcionals</string>
+    <string name="s_49e2b83" formatted="false">Pols</string>
+    <string name="s_806e30c6" formatted="false">Nota per a aquesta presa</string>
+    <string name="s_284263a5" formatted="false">Màxim 140 caràcters</string>
+    <string name="s_85510e1b" formatted="false">Introdueix una sistòlica entre 40 i 300 mmHg.</string>
+    <string name="s_a49d2120" formatted="false">La diastòlica ha d\'estar entre 30 i 200 i ser inferior a la sistòlica.</string>
+    <string name="s_a8611f3c" formatted="false">Introdueix un pols entre 20 i 250 bpm.</string>
+    <string name="s_67b7b448" formatted="false">No s\'ha pogut desar la presa en aquest Android. Torna-ho a provar.</string>
+    <string name="s_4c6b4419" formatted="false">Les meves mesures</string>
+    <string name="s_e2624268" formatted="false">Desat en aquest Android</string>
+    <string name="s_7ebcc62e" formatted="false">Desada a l\'Android</string>
+    <string name="s_30bfa70a" formatted="false">Encara no hi ha preses desades</string>
+    <string name="s_28f0ab04" formatted="false">Preses disponibles sense connexió: %ld</string>
+    <string name="s_f04d29d4" formatted="false">ÚLTIMA PRESA</string>
+    <string name="s_a234b9c" formatted="false">Toca «Desa una nova presa» per començar.</string>
+    <string name="s_f9cbd920" formatted="false">MITJANA 7 DIES</string>
+    <string name="s_8a6ea3be" formatted="false">AQUESTA SETMANA</string>
+    <string name="s_696c104" formatted="false">preses</string>
+    <string name="s_b5a10508" formatted="false">EVOLUCIÓ</string>
+    <string name="s_91079878" formatted="false">Últimes mesures</string>
+    <string name="s_1a30c3e9" formatted="false">La teva evolució apareixerà aquí</string>
+    <string name="s_954ebb58" formatted="false">Desa dues preses o més.</string>
+    <string name="s_b3ca35d2" formatted="false">Registre de preses</string>
+    <string name="s_d62886b3" formatted="false">Cada targeta és una presa independent</string>
+    <string name="s_3ac3daae" formatted="false">Període</string>
+    <string name="s_5fce7544" formatted="false">7 dies</string>
+    <string name="s_ddba56de" formatted="false">30 dies</string>
+    <string name="s_1b1fba64" formatted="false">90 dies</string>
+    <string name="s_27dc66" formatted="false">Tot</string>
+    <string name="s_4d3af1b" formatted="false">Totes</string>
+    <string name="s_a5aaaf9c" formatted="false">Sense preses</string>
+    <string name="s_d87a9c23" formatted="false">Desa la teva primera mesura.</string>
+    <string name="s_f6cefbab" formatted="false">Vols eliminar aquesta presa?</string>
+    <string name="s_27eecca9" formatted="false">Elimina definitivament</string>
+    <string name="s_97f2a6d" formatted="false">La presa s\'eliminarà de l\'emmagatzematge local de l\'Android.</string>
+    <string name="s_dfe6134e" formatted="false">Elimina la presa</string>
+    <string name="s_612b1c06" formatted="false">Preses desades en aquest Android: %ld</string>
+    <string name="s_cb3488e0" formatted="false">Sense preses en aquest període</string>
+    <string name="s_539710d2" formatted="false">Vista mèdica</string>
+    <string name="s_ee662eb0" formatted="false">Mesures</string>
+    <string name="s_c87dc585" formatted="false">Mitjana</string>
+    <string name="s_7125c2f8" formatted="false">Sense mesures</string>
+    <string name="s_1be0282e" formatted="false">No hi ha dades en aquest període.</string>
+    <string name="s_d5f27807" formatted="false">Comparteix o imprimeix</string>
+    <string name="s_47a26b54" formatted="false">Últims %ld dies</string>
+    <string name="s_967d22b4" formatted="false">Històric complet</string>
+    <string name="s_1a369" formatted="false">bpm</string>
+    <string name="s_5231ae75" formatted="false">Còpia de seguretat</string>
+    <string name="s_d584bd65" formatted="false">Desa una còpia de les mesures a Fitxers, iCloud Drive o al servei que prefereixis.</string>
+    <string name="s_ecdde7b9" formatted="false">Crea i comparteix una còpia</string>
+    <string name="s_304f4272" formatted="false">Restaura des d\'una còpia</string>
+    <string name="s_5f2dfd59" formatted="false">Contingut</string>
+    <string name="s_6179e5d7" formatted="false">Última còpia</string>
+    <string name="s_db062cc9" formatted="false">La còpia conté dades de salut. Desa-la en un lloc privat i comparteix-la només amb persones de confiança.</string>
+    <string name="s_909153e3" formatted="false">Còpia i restauració</string>
+    <string name="s_4f1d1d94" formatted="false">Preses restaurades: %ld</string>
+    <string name="s_549e3fde" formatted="false">No s\'ha pogut llegir aquesta còpia.</string>
+    <string name="s_2ce323c2" formatted="false">Còpia preparada correctament.</string>
+    <string name="s_aed0fc3" formatted="false">No s\'ha pogut crear la còpia.</string>
+    <string name="s_db201bd4" formatted="false">Guia i privacitat</string>
+    <string name="s_b1b0cb8e" formatted="false">Com prendre la tensió</string>
+    <string name="s_5f56ebdd" formatted="false">Prepara el tensiòmetre</string>
+    <string name="s_7c829133" formatted="false">Fes servir un tensiòmetre de braç validat amb un maneguet de la teva talla. L\'app registra les lectures de l\'aparell.</string>
+    <string name="s_5778ea1" formatted="false">Abans de mesurar</string>
+    <string name="s_d9208800" formatted="false">Evita exercici, tabac i cafeïna durant els 30 minuts previs. Buida la bufeta.</string>
+    <string name="s_85e87776" formatted="false">Descansa 5 minuts</string>
+    <string name="s_3e61eef1" formatted="false">Seu en silenci, amb l\'esquena recolzada, els peus a terra i les cames sense creuar.</string>
+    <string name="s_9ee49f60" formatted="false">Col·loca el braç</string>
+    <string name="s_bce0d3dc" formatted="false">Posa el maneguet sobre la pell seguint les instruccions de l\'aparell. Recolza el braç a l\'altura del cor.</string>
+    <string name="s_7351154d" formatted="false">Fes dues preses</string>
+    <string name="s_a38f8d7f" formatted="false">No parlis ni et moguis. Espera almenys 1 minut entre les mesures i desa cadascuna per separat.</string>
+    <string name="s_996169f1" formatted="false">Segueix la teva pauta</string>
+    <string name="s_7bdf6efa" formatted="false">Mesura en els horaris indicats pel teu professional sanitari i porta l\'informe a la consulta.</string>
+    <string name="s_f5d01df6" formatted="false">Font: American Heart Association</string>
+    <string name="s_f3051bee" formatted="false">La teva privacitat</string>
+    <string name="s_ea1c8dca" formatted="false">No desem dades en servidors</string>
+    <string name="s_96f4866e" formatted="false">Les preses i notes es desen només en aquest Android perquè puguis consultar l\'històric. L\'app no exigeix cap compte ni envia les mesures als nostres servidors.</string>
+    <string name="s_3c612b37" formatted="false">Només tu decideixes si exportes o comparteixes un informe o una còpia. Les còpies del dispositiu poden incloure dades de l\'app segons els ajustos d\'Android.</string>
+    <string name="s_cfff210d" formatted="false">Eliminar l\'app pot esborrar l\'històric local. Exporta una còpia per conservar-lo.</string>
+    <string name="s_8d841cb6" formatted="false">Informe de seguiment · %@</string>
+    <string name="s_818ba723" formatted="false">Generat el %@</string>
+    <string name="s_5ea6d1ca" formatted="false">Les mesures les ha introduït l\'usuari. Aquest informe no substitueix la valoració clínica.</string>
+    <string name="s_409d75d" formatted="false">Data</string>
+    <string name="s_4c1415c" formatted="false">Sèrie</string>
+    <string name="s_2c85466e" formatted="false">Alertes</string>
+    <string name="s_139ed330" formatted="false">Recordatoris de les preses</string>
+    <string name="s_c411130e" formatted="false">Tria hores i dies per al matí i la nit. Els avisos estan desactivats inicialment.</string>
+    <string name="s_5cdc1c7e" formatted="false">Selecciona almenys un dia.</string>
+    <string name="s_ba1a9a23" formatted="false">Activa les notificacions a Configuració per rebre avisos.</string>
+    <string name="s_4c085815" formatted="false">Hora de prendre la tensió</string>
+    <string name="s_1c0e9bf9" formatted="false">Descansa uns minuts i registra la presa a Mi Tensión.</string>
+    <string name="s_780e21e4" formatted="false">Desar alertes</string>
+    <string name="s_645478a6" formatted="false">Alertes desades.</string>
+    <string name="s_1fb58fbe" formatted="false">Obrir configuració de notificacions</string>
+    <string name="s_d8b872b9" formatted="false">Informació</string>
+    <string name="s_b8d7f7ff" formatted="false">Els avisos es programen en aquest Android sense enviar dades a servidors. Funcionen encara que l’app estigui tancada.</string>
+    <string name="s_4afc7f19" formatted="false">Has de permetre les notificacions. El mode Concentració i la configuració de so poden silenciar o retardar els avisos.</string>
+    <string name="s_469a8ee6" formatted="false">Són recordatoris, no alarmes mèdiques: no detecten valors de tensió ni substitueixen les indicacions del metge.</string>
+    <string name="s_ee47328c" formatted="false">Prem Desar alertes per aplicar els canvis. Desactiva tots dos avisos i desa per cancel·lar-los.</string>
+    <string name="s_781981f3" formatted="false">Tancar</string>
+    <string name="s_b144c5a0" formatted="false">Activar avís</string>
+    <string name="s_226996" formatted="false">Hora</string>
+    <string name="s_2d1420aa" formatted="false">Dies de la setmana</string>
+    <string name="s_13cbf" formatted="false">Més</string>
+    <string name="s_e3bad0bc" formatted="false">Gràfics</string>
+    <string name="s_54ae2459" formatted="false">Les teves dades d’un cop d’ull</string>
+    <string name="s_8df2f87e" formatted="false">Observa les teves mesures al llarg del temps.</string>
+    <string name="s_46c7fc4" formatted="false">Mitjana</string>
+    <string name="s_96a4d5de" formatted="false">La teva rutina diària</string>
+    <string name="s_691572bd" formatted="false">Guia, avisos i dades en un sol lloc.</string>
+    <string name="s_3ee268c9" formatted="false">Tria hores i dies.</string>
+    <string name="s_660a5f6" formatted="false">Com mesurar i protegir les dades.</string>
+    <string name="s_e40e17fd" formatted="false">Exportar a Excel</string>
+    <string name="s_f8b4e9c8" formatted="false">Totes les preses en un full de càlcul.</string>
+    <string name="s_9373a6ee" formatted="false">Conserva i restaura l’històric.</string>
+    <string name="s_13bb6c38" formatted="false">Notes i identificador únic</string>
+    <string name="s_629e024a" formatted="false">Crear fitxer Excel</string>
+    <string name="s_5dc799e1" formatted="false">No s’ha pogut exportar el fitxer.</string>
+    <string name="s_47f5e25" formatted="false">Notes</string>
+    <string name="s_3848b42e" formatted="false">Provar avís en 10 segons</string>
+    <string name="s_541915a6" formatted="false">Avís de prova programat.</string>
+    <string name="s_8df6a8a9" formatted="false">Avisos programats: %ld</string>
+    <string name="s_c5861815" formatted="false">Amagar aquest avís</string>
+    <string name="s_47ddbb91" formatted="false">No es tornarà a mostrar en aquest Android. Les preses es conserven.</string>
+    <string name="s_47f2d038" formatted="false">Medicaments d’aquesta presa</string>
+    <string name="s_62bfb41c" formatted="false">Registra els medicaments associats a aquesta presa. És un registre, no una recomanació de tractament.</string>
+    <string name="s_954a93aa" formatted="false">Nom del medicament</string>
+    <string name="s_52d3bede" formatted="false">Dosi (opcional)</string>
+    <string name="s_9471bd41" formatted="false">Nota del medicament (opcional)</string>
+    <string name="s_a8a355b2" formatted="false">Afegir medicament</string>
+    <string name="s_7ad13536" formatted="false">Treure medicament</string>
+    <string name="s_deeaa6fd" formatted="false">Introdueix el nom del medicament o treu la fila buida.</string>
+    <string name="s_52eba893" formatted="false">Encara no hi ha preses</string>
+    <string name="s_5553b215" formatted="false">Mesura molt elevada</string>
+    <string name="s_7a8aff97" formatted="false">Elimina medicament</string>
+    <string name="s_a5e1cd61" formatted="false">Revisa els valors.</string>
+    <string name="s_28cba5b9" formatted="false">Desa presa</string>
+    <string name="s_e6d0b2d8" formatted="false">Anterior</string>
+    <string name="s_c3cb755f" formatted="false">Següent</string>
+    <string name="s_e65c61dc" formatted="false">Alarma sonora</string>
+    <string name="s_54962ea7" formatted="false">Atura alarma</string>
+    <string name="s_c7dea4d6" formatted="false">Configuració desada</string>
+    <string name="s_b2ba5380" formatted="false">Permís d’alarmes exactes</string>
+    <string name="s_a4ee1fce" formatted="false">Al cap de 30 minuts tornarem a avisar si no has desat la presa del dia i període.</string>
+    <string name="s_3cab47ad" formatted="false">Sense permís d’alarmes exactes, Android pot retardar els avisos. Les alarmes sonores necessiten aquest permís.</string>
+    <string name="s_15a668fc" formatted="false">Les referències orienten adults, no són diagnòstics ni objectius personals. No s’apliquen a l’embaràs ni a menors.</string>
+</resources>

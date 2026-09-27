@@ -1,0 +1,213 @@
+<resources>
+    <string name="s_ead3a493">طباعة</string>
+    <string name="app_name">Mi Tensión</string>
+    <string name="s_1afbfccf" formatted="false">تنسيق الملف</string>
+    <string name="s_deb1c628" formatted="false">الأعمدة</string>
+    <string name="s_a69b6ee9" formatted="false">استخدم ملف Excel (.xlsx) المصدّر من Mi Tensión كقالب. احتفظ بالصف الأول وترتيب الأعمدة ولا تستخدم الصيغ.</string>
+    <string name="s_16d098e2" formatted="false">كل صف بدءًا من الثاني قياس مستقل. يمكن استيراد قياس أو قياسين أو ثلاثة صباحًا أو مساءً يوميًا؛ لا تُحسب متوسطات ولا يلزم إكمال ثلاثة.</string>
+    <string name="s_e993def4" formatted="false">يُحدّد الصباح والمساء حسب التاريخ والوقت المحليين: قبل 14:00 صباحًا ومن 14:00 مساءً. العمود B لا يغيّر هذا التصنيف.</string>
+    <string name="s_f955df66" formatted="false">A وC وD وG مطلوبة. يجب أن يكون A تاريخًا ووقتًا بتنسيق Excel وليس نصًا؛ C وD عددان صحيحان بلا وحدات. يمكن ترك E وF وH فارغة.</string>
+    <string name="s_3526c142" formatted="false">G يعرّف القياس: احتفظ بمعرّف UUID لمنع التكرار واستخدم معرّفًا مختلفًا للقياس الجديد. I وJ وK أعمدة تقنية مخفية؛ لا تعدّلها ولا تنسخ قيمها إلى قياسات جديدة.</string>
+    <string name="s_d9dc4ecc" formatted="false">باعد بين إصبعيك أو اضغط مرتين للتكبير.</string>
+    <string name="s_d4b1d477" formatted="false">اضغط لتكبير الصورة.</string>
+    <string name="s_4d5c2d62" formatted="false">استيراد السجلات من Excel</string>
+    <string name="s_bd37a5c3" formatted="false">اختر ملف Excel مُصدّرًا من Mi Tensión. تُضاف السجلات الجديدة دون حذف السجل أو تكرار القياسات.</string>
+    <string name="s_d8215a28" formatted="false">تعذّر استيراد Excel. استخدم ملفًا مُصدّرًا من Mi Tensión يحتوي على سجلات صالحة.</string>
+    <string name="s_ef3d37a3" formatted="false">التذكيرات الثانية المجدولة: %ld</string>
+    <string name="s_7ba6fa8a" formatted="false">مرت 30 دقيقة ولم تحفظ قياسًا لهذه الفترة. سجّله عندما تستطيع.</string>
+    <string name="s_6afcd43b" formatted="false">تعذّر تحديث التذكير الثاني. تحقق من أذونات الإشعارات وافتح التنبيهات مجددًا.</string>
+    <string name="s_19bc8f2c" formatted="false">إذا لم تحفظ قياسًا لذلك اليوم والفترة، يصلك إشعار ثانٍ بصوت بعد 30 دقيقة. يتكرر مرة واحدة فقط. تُجدول الأيام الـ21 التالية وتُجدد عند فتح التطبيق؛ افتح Mi Tensión كل ثلاثة أسابيع على الأقل. لا يتكرر منبه النظام.</string>
+    <string name="s_dc5f854f" formatted="false">فتح إعدادات المنبهات</string>
+    <string name="s_2bcf547a" formatted="false">اختبار المنبه بعد 10 ثوانٍ</string>
+    <string name="s_a1e8ec34" formatted="false">تمت جدولة المنبه التجريبي.</string>
+    <string name="s_c80eac83" formatted="false">منبه صوتي بالإضافة إلى الإشعار</string>
+    <string name="s_18ecbd73" formatted="false">المنبهات الصوتية متاحة بدءًا من Android 26.</string>
+    <string name="s_c044241a" formatted="false">تم حفظ الإعدادات. اسمح بالمنبهات في الإعدادات لكي ترن.</string>
+    <string name="s_188f4d36" formatted="false">تتطلب المنبهات الصوتية Android 26 وإذن المنبهات. يمكنها الرنين في الوضع الصامت أو التركيز حتى عند إغلاق التطبيق. عطّلها إذا كنت تفضّل الإشعارات فقط.</string>
+    <string name="s_3ebf14aa" formatted="false">الحقل السابق</string>
+    <string name="s_69a94dcd" formatted="false">الحقل التالي</string>
+    <string name="s_2e7572a5" formatted="false">إغلاق لوحة المفاتيح</string>
+    <string name="s_33f261b" formatted="false">تم حفظ الإعدادات. فعّل الإشعارات في الإعدادات لتلقي التذكيرات.</string>
+    <string name="s_6e99506c" formatted="false">الحفظ يطبّق التغييرات. الإغلاق يحفظ أيضًا التغييرات المعلقة. دون إذن الإشعارات، تُحفظ الإعدادات لكن التذكيرات لن تظهر.</string>
+    <string name="s_fc8b8ba4" formatted="false">عدد القراءات</string>
+    <string name="s_5596cfde" formatted="false">قراءة واحدة</string>
+    <string name="s_c70fa2d7" formatted="false">3 قراءات</string>
+    <string name="s_c51cb22c" formatted="false">القراءة %ld</string>
+    <string name="s_b9b19c0d" formatted="false">تُحفظ كل قراءة بشكل منفصل. أدخل قيم كل قياس.</string>
+    <string name="s_474ab8c3" formatted="false">يُحدد تلقائيًا عند الحفظ حسب الوقت المحلي لـ Android: صباحًا قبل 14:00 ومساءً من 14:00. يمكن حذف القراءات المحفوظة فقط.</string>
+    <string name="s_dcae2004" formatted="false">متابعة</string>
+    <string name="s_31d56f75" formatted="false">تعذرت قراءة السجل. تم الاحتفاظ بالملف الأصلي؛ استعده قبل حفظ قياسات جديدة.</string>
+    <string name="s_70e0bf52" formatted="false">الانقباضي (العلوي)</string>
+    <string name="s_71b6689a" formatted="false">الانبساطي (السفلي)</string>
+    <string name="s_657e10b6" formatted="false">فوق القيمة المرجعية</string>
+    <string name="s_774e9b2c" formatted="false">أقل من القيمة المرجعية</string>
+    <string name="s_71502458" formatted="false">ماذا تعني هذه القيم</string>
+    <string name="s_adb167a4" formatted="false">الانقباضي هو الضغط عند انقباض القلب. الانبساطي هو الضغط بين النبضات؛ «السفلي» لا يعني أن القيمة منخفضة.</string>
+    <string name="s_6dd12efc" formatted="false">مرجع منزلي إرشادي للبالغين: الانقباضي من 135 أو الانبساطي من 85 ملم زئبق. يُقيّم متوسط عدة أيام، وليس قراءة واحدة. إذا تكرر ذلك، استشر مختصًا ولا تغيّر الدواء بنفسك. قد تختلف أهدافك. لا ينطبق على الأطفال أو الحمل.</string>
+    <string name="s_7a8bd5e7" formatted="false">قراءة مرتفعة جدًا. مع ألم الصدر أو ضيق التنفس أو الضعف أو صعوبة الكلام، اتصل بالطوارئ فورًا. دون أعراض، أعد القياس بعد دقيقة واحدة على الأقل؛ وإذا بقي مرتفعًا، تواصل مع مختص صحي في أقرب وقت.</string>
+    <string name="s_a4a3d5c1" formatted="false">ملخص</string>
+    <string name="s_e58f1e54" formatted="false">السجل</string>
+    <string name="s_906797ed" formatted="false">الطبيب</string>
+    <string name="s_221aa2" formatted="false">دليل</string>
+    <string name="s_3e44d7c" formatted="false">نسخة احتياطية</string>
+    <string name="s_42578d50" formatted="false">حفظ قراءة جديدة</string>
+    <string name="s_790dad76" formatted="false">حفظ</string>
+    <string name="s_fc82e84b" formatted="false">إلغاء</string>
+    <string name="s_371ca486" formatted="false">قراءة جديدة</string>
+    <string name="s_43918486" formatted="false">قراءة مستقلة</string>
+    <string name="s_c60c1af6" formatted="false">ستحصل هذه القراءة على معرّف فريد وستُحفظ على هذا Android.</string>
+    <string name="s_5d347db6" formatted="false">ضغط الدم</string>
+    <string name="s_447d2917" formatted="false">الانقباضي</string>
+    <string name="s_a6d75871" formatted="false">الانبساطي</string>
+    <string name="s_8bf34eec" formatted="false">وقت القراءة</string>
+    <string name="s_acd9564f" formatted="false">الوقت</string>
+    <string name="s_892b16f7" formatted="false">الصباح</string>
+    <string name="s_47f1f1f" formatted="false">المساء</string>
+    <string name="s_568946e0" formatted="false">التاريخ والوقت</string>
+    <string name="s_378606e4" formatted="false">تفاصيل اختيارية</string>
+    <string name="s_49e2b83" formatted="false">النبض</string>
+    <string name="s_806e30c6" formatted="false">ملاحظة لهذه القراءة</string>
+    <string name="s_284263a5" formatted="false">140 حرفًا كحد أقصى</string>
+    <string name="s_85510e1b" formatted="false">أدخل ضغطًا انقباضيًا بين 40 و300 ملم زئبق.</string>
+    <string name="s_a49d2120" formatted="false">يجب أن يكون الضغط الانبساطي بين 30 و200 وأقل من الضغط الانقباضي.</string>
+    <string name="s_a8611f3c" formatted="false">أدخل نبضًا بين 20 و250 ضربة في الدقيقة.</string>
+    <string name="s_67b7b448" formatted="false">تعذر حفظ القراءة على هذا Android. حاول مجددًا.</string>
+    <string name="s_4c6b4419" formatted="false">قراءاتي</string>
+    <string name="s_e2624268" formatted="false">محفوظ على هذا Android</string>
+    <string name="s_7ebcc62e" formatted="false">محفوظة على Android</string>
+    <string name="s_30bfa70a" formatted="false">لا توجد قراءات محفوظة بعد</string>
+    <string name="s_28f0ab04" formatted="false">القراءات المتاحة دون اتصال: %ld</string>
+    <string name="s_f04d29d4" formatted="false">آخر قراءة</string>
+    <string name="s_a234b9c" formatted="false">اضغط «حفظ قراءة جديدة» للبدء.</string>
+    <string name="s_f9cbd920" formatted="false">متوسط 7 أيام</string>
+    <string name="s_8a6ea3be" formatted="false">هذا الأسبوع</string>
+    <string name="s_696c104" formatted="false">قراءات</string>
+    <string name="s_b5a10508" formatted="false">التطور</string>
+    <string name="s_91079878" formatted="false">القراءات الأخيرة</string>
+    <string name="s_1a30c3e9" formatted="false">سيظهر تطور قراءاتك هنا</string>
+    <string name="s_954ebb58" formatted="false">احفظ قراءتين أو أكثر.</string>
+    <string name="s_b3ca35d2" formatted="false">سجل القراءات</string>
+    <string name="s_d62886b3" formatted="false">كل بطاقة تمثل قراءة مستقلة</string>
+    <string name="s_3ac3daae" formatted="false">الفترة</string>
+    <string name="s_5fce7544" formatted="false">7 أيام</string>
+    <string name="s_ddba56de" formatted="false">30 يومًا</string>
+    <string name="s_1b1fba64" formatted="false">90 يومًا</string>
+    <string name="s_27dc66" formatted="false">الكل</string>
+    <string name="s_4d3af1b" formatted="false">الكل</string>
+    <string name="s_a5aaaf9c" formatted="false">لا توجد قراءات</string>
+    <string name="s_d87a9c23" formatted="false">احفظ قراءتك الأولى.</string>
+    <string name="s_f6cefbab" formatted="false">هل تريد حذف هذه القراءة؟</string>
+    <string name="s_27eecca9" formatted="false">حذف نهائي</string>
+    <string name="s_97f2a6d" formatted="false">ستُحذف القراءة من التخزين المحلي في Android.</string>
+    <string name="s_dfe6134e" formatted="false">حذف القراءة</string>
+    <string name="s_612b1c06" formatted="false">القراءات المحفوظة على هذا Android: %ld</string>
+    <string name="s_cb3488e0" formatted="false">لا توجد قراءات في هذه الفترة</string>
+    <string name="s_539710d2" formatted="false">التقرير الطبي</string>
+    <string name="s_ee662eb0" formatted="false">القراءات</string>
+    <string name="s_c87dc585" formatted="false">المتوسط</string>
+    <string name="s_7125c2f8" formatted="false">لا توجد قراءات</string>
+    <string name="s_1be0282e" formatted="false">لا توجد بيانات في هذه الفترة.</string>
+    <string name="s_d5f27807" formatted="false">مشاركة أو طباعة</string>
+    <string name="s_47a26b54" formatted="false">آخر %ld يومًا</string>
+    <string name="s_967d22b4" formatted="false">السجل الكامل</string>
+    <string name="s_1a369" formatted="false">ضربة/دقيقة</string>
+    <string name="s_5231ae75" formatted="false">نسخة احتياطية</string>
+    <string name="s_d584bd65" formatted="false">احفظ نسخة من قراءاتك في الملفات أو iCloud Drive أو الخدمة التي تفضلها.</string>
+    <string name="s_ecdde7b9" formatted="false">إنشاء نسخة ومشاركتها</string>
+    <string name="s_304f4272" formatted="false">استعادة من نسخة</string>
+    <string name="s_5f2dfd59" formatted="false">المحتويات</string>
+    <string name="s_6179e5d7" formatted="false">آخر نسخة</string>
+    <string name="s_db062cc9" formatted="false">تحتوي النسخة على بيانات صحية. احتفظ بها في مكان خاص وشاركها فقط مع من تثق بهم.</string>
+    <string name="s_909153e3" formatted="false">النسخ والاستعادة</string>
+    <string name="s_4f1d1d94" formatted="false">القراءات المستعادة: %ld</string>
+    <string name="s_549e3fde" formatted="false">تعذرت قراءة هذه النسخة.</string>
+    <string name="s_2ce323c2" formatted="false">تم إنشاء النسخة بنجاح.</string>
+    <string name="s_aed0fc3" formatted="false">تعذر إنشاء النسخة.</string>
+    <string name="s_db201bd4" formatted="false">الدليل والخصوصية</string>
+    <string name="s_b1b0cb8e" formatted="false">كيفية قياس ضغط الدم</string>
+    <string name="s_5f56ebdd" formatted="false">جهّز جهاز القياس</string>
+    <string name="s_7c829133" formatted="false">استخدم جهاز قياس معتمدًا للذراع مع كُمّ مناسب لحجمك. يسجل التطبيق قراءات الجهاز.</string>
+    <string name="s_5778ea1" formatted="false">قبل القياس</string>
+    <string name="s_d9208800" formatted="false">تجنب الرياضة والتبغ والكافيين خلال الثلاثين دقيقة السابقة. أفرغ المثانة.</string>
+    <string name="s_85e87776" formatted="false">استرح 5 دقائق</string>
+    <string name="s_3e61eef1" formatted="false">اجلس بهدوء مع إسناد ظهرك ووضع قدميك على الأرض دون تشبيك ساقيك.</string>
+    <string name="s_9ee49f60" formatted="false">ضع ذراعك بشكل صحيح</string>
+    <string name="s_bce0d3dc" formatted="false">ضع الكُمّ على الجلد مباشرة وفق تعليمات الجهاز. اسند ذراعك على مستوى القلب.</string>
+    <string name="s_7351154d" formatted="false">خذ قراءتين</string>
+    <string name="s_a38f8d7f" formatted="false">لا تتحدث ولا تتحرك. انتظر دقيقة واحدة على الأقل بين القراءتين واحفظ كل قراءة على حدة.</string>
+    <string name="s_996169f1" formatted="false">اتبع إرشاداتك</string>
+    <string name="s_7bdf6efa" formatted="false">قِس في الأوقات التي يحددها المختص الصحي وخذ التقرير إلى موعدك.</string>
+    <string name="s_f5d01df6" formatted="false">المصدر: American Heart Association</string>
+    <string name="s_f3051bee" formatted="false">خصوصيتك</string>
+    <string name="s_ea1c8dca" formatted="false">لا نخزن البيانات على خوادم</string>
+    <string name="s_96f4866e" formatted="false">تُحفظ قراءاتك وملاحظاتك على هذا Android فقط لتتمكن من مراجعة السجل. لا يتطلب التطبيق حسابًا ولا يرسل قراءاتك إلى خوادمنا.</string>
+    <string name="s_3c612b37" formatted="false">أنت وحدك تقرر تصدير تقرير أو نسخة أو مشاركتهما. قد تتضمن نسخ الجهاز بيانات التطبيق حسب إعدادات Android.</string>
+    <string name="s_cfff210d" formatted="false">قد يؤدي حذف التطبيق إلى مسح السجل المحلي. صدّر نسخة للاحتفاظ به.</string>
+    <string name="s_8d841cb6" formatted="false">تقرير المتابعة · %@</string>
+    <string name="s_818ba723" formatted="false">أُنشئ في %@</string>
+    <string name="s_5ea6d1ca" formatted="false">أدخل المستخدم القراءات. لا يغني هذا التقرير عن التقييم السريري.</string>
+    <string name="s_409d75d" formatted="false">التاريخ</string>
+    <string name="s_4c1415c" formatted="false">السلسلة</string>
+    <string name="s_2c85466e" formatted="false">التذكيرات</string>
+    <string name="s_139ed330" formatted="false">تذكيرات القياس</string>
+    <string name="s_c411130e" formatted="false">اختر أوقات وأيام الصباح والمساء. التذكيرات معطلة افتراضيًا.</string>
+    <string name="s_5cdc1c7e" formatted="false">اختر يومًا واحدًا على الأقل.</string>
+    <string name="s_ba1a9a23" formatted="false">فعّل الإشعارات في الإعدادات لتلقي التذكيرات.</string>
+    <string name="s_4c085815" formatted="false">حان وقت قياس ضغط الدم</string>
+    <string name="s_1c0e9bf9" formatted="false">استرح بضع دقائق وسجّل القياس في Mi Tensión.</string>
+    <string name="s_780e21e4" formatted="false">حفظ التذكيرات</string>
+    <string name="s_645478a6" formatted="false">تم حفظ التذكيرات.</string>
+    <string name="s_1fb58fbe" formatted="false">فتح إعدادات الإشعارات</string>
+    <string name="s_d8b872b9" formatted="false">معلومات</string>
+    <string name="s_b8d7f7ff" formatted="false">تُجدول التذكيرات على هذا Android دون إرسال بيانات إلى خوادم. تعمل حتى عندما يكون التطبيق مغلقًا.</string>
+    <string name="s_4afc7f19" formatted="false">يجب السماح بالإشعارات. قد يؤدي وضع التركيز وإعدادات الصوت إلى إسكات التذكيرات أو تأخيرها.</string>
+    <string name="s_469a8ee6" formatted="false">هذه تذكيرات وليست إنذارات طبية: لا تكتشف قيم ضغط الدم ولا تحل محل تعليمات الطبيب.</string>
+    <string name="s_ee47328c" formatted="false">اضغط حفظ التذكيرات لتطبيق التغييرات. عطّل التذكيرين واحفظ لإلغائهما.</string>
+    <string name="s_781981f3" formatted="false">إغلاق</string>
+    <string name="s_b144c5a0" formatted="false">تفعيل التذكير</string>
+    <string name="s_226996" formatted="false">الوقت</string>
+    <string name="s_2d1420aa" formatted="false">أيام الأسبوع</string>
+    <string name="s_13cbf" formatted="false">المزيد</string>
+    <string name="s_e3bad0bc" formatted="false">الرسوم البيانية</string>
+    <string name="s_54ae2459" formatted="false">بياناتك في لمحة</string>
+    <string name="s_8df2f87e" formatted="false">تابع قياساتك مع مرور الوقت.</string>
+    <string name="s_46c7fc4" formatted="false">المتوسط</string>
+    <string name="s_96a4d5de" formatted="false">روتينك اليومي</string>
+    <string name="s_691572bd" formatted="false">الدليل والتذكيرات وبياناتك في مكان واحد.</string>
+    <string name="s_3ee268c9" formatted="false">اختر أوقاتك وأيامك.</string>
+    <string name="s_660a5f6" formatted="false">كيفية القياس وحماية بياناتك.</string>
+    <string name="s_e40e17fd" formatted="false">تصدير إلى Excel</string>
+    <string name="s_f8b4e9c8" formatted="false">كل قياساتك في جدول بيانات.</string>
+    <string name="s_9373a6ee" formatted="false">احفظ سجلك واستعده.</string>
+    <string name="s_13bb6c38" formatted="false">ملاحظات ومعرّف فريد</string>
+    <string name="s_629e024a" formatted="false">إنشاء ملف Excel</string>
+    <string name="s_5dc799e1" formatted="false">تعذّر تصدير الملف.</string>
+    <string name="s_47f5e25" formatted="false">ملاحظات</string>
+    <string name="s_3848b42e" formatted="false">اختبار التذكير بعد 10 ثوانٍ</string>
+    <string name="s_541915a6" formatted="false">تمت جدولة تذكير الاختبار.</string>
+    <string name="s_8df6a8a9" formatted="false">التذكيرات المجدولة: %ld</string>
+    <string name="s_c5861815" formatted="false">إخفاء هذا التنبيه</string>
+    <string name="s_47ddbb91" formatted="false">لن يظهر مجددًا على هذا Android. ستبقى قياساتك محفوظة.</string>
+    <string name="s_47f2d038" formatted="false">أدوية هذا القياس</string>
+    <string name="s_62bfb41c" formatted="false">سجّل الأدوية المرتبطة بهذا القياس. هذا سجل وليس توصية علاجية.</string>
+    <string name="s_954a93aa" formatted="false">اسم الدواء</string>
+    <string name="s_52d3bede" formatted="false">الجرعة (اختياري)</string>
+    <string name="s_9471bd41" formatted="false">ملاحظة عن الدواء (اختياري)</string>
+    <string name="s_a8a355b2" formatted="false">إضافة دواء</string>
+    <string name="s_7ad13536" formatted="false">إزالة الدواء</string>
+    <string name="s_deeaa6fd" formatted="false">أدخل اسم الدواء أو أزل السطر الفارغ.</string>
+    <string name="s_52eba893" formatted="false">لا توجد قياسات بعد</string>
+    <string name="s_5553b215" formatted="false">قياس مرتفع جدًا</string>
+    <string name="s_7a8aff97" formatted="false">حذف الدواء</string>
+    <string name="s_a5e1cd61" formatted="false">راجع قيم القياسات.</string>
+    <string name="s_28cba5b9" formatted="false">حفظ القياس</string>
+    <string name="s_e6d0b2d8" formatted="false">السابق</string>
+    <string name="s_c3cb755f" formatted="false">التالي</string>
+    <string name="s_e65c61dc" formatted="false">منبه صوتي</string>
+    <string name="s_54962ea7" formatted="false">إيقاف المنبه</string>
+    <string name="s_c7dea4d6" formatted="false">تم حفظ الإعدادات</string>
+    <string name="s_b2ba5380" formatted="false">إذن المنبهات الدقيقة</string>
+    <string name="s_a4ee1fce" formatted="false">بعد 30 دقيقة يظهر تذكير آخر إن لم يُحفظ قياس لذلك اليوم والفترة.</string>
+    <string name="s_3cab47ad" formatted="false">قد يؤخّر Android التذكيرات دون إذن المنبهات الدقيقة. المنبهات الصوتية تحتاج هذا الإذن.</string>
+    <string name="s_15a668fc" formatted="false">القيم مرجع إرشادي للبالغين وليست تشخيصًا أو هدفًا شخصيًا، ولا تنطبق على الحمل أو الأطفال.</string>
+</resources>
