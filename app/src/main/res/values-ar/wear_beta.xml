@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">الساعة · تجريبي</string>
+    <string name="wear_intro">تجربة اتصال بساعات Wear OS. اعرض النبض المشترك وراجع قياسات الضغط المتاحة قبل حفظها.</string>
+    <string name="wear_no_estimate">لا يمكن حساب ضغط الدم بدقة من النبض وحده. لا ننشئ قيماً للضغط دون قياس موجود.</string>
+    <string name="wear_requirements">نعرض فقط سجلات Health Connect المحددة بأنها من ساعة. يعتمد التوفر على الساعة والتطبيقات والأذونات.</string>
+    <string name="wear_connect">اتصل وابحث عن البيانات</string>
+    <string name="wear_error">تعذرت قراءة Health Connect. تحقق من الاتصال والأذونات.</string>
+    <string name="wear_permission_denied">لم تُمنح الأذونات. يظل الإدخال اليدوي متاحاً.</string>
+    <string name="wear_unavailable">Health Connect غير متاح أو يحتاج إلى تثبيت أو تحديث.</string>
+    <string name="wear_pulse_title">آخر نبض من الساعة</string>
+    <string name="wear_no_pulse">لا يوجد نبض متاح من الساعة.</string>
+    <string name="wear_bp_title">ضغط الدم المسجل بالساعة</string>
+    <string name="wear_no_bp">لا توجد قياسات ضغط محددة بأنها من ساعة. يمكنك مواصلة الإدخال اليدوي.</string>
+    <string name="wear_save">احفظ هذه القراءة</string>
+    <string name="wear_confirm_title">هل تريد حفظ قراءة الساعة؟</string>
+    <string name="wear_confirm_body">ستُضاف %1$d / %2$d مم زئبق إلى السجل المحلي. تحقق من القياس؛ لا يغني عن جهاز ضغط معتمد.</string>
+    <string name="wear_duplicate">القراءة محفوظة مسبقاً.</string>
+    <string name="wear_saved">حُفظت القراءة على الجهاز.</string>
+    <string name="wear_manual">يبقى الإدخال اليدوي متاحاً. هذه النسخة التجريبية لا تزامن تلقائياً.</string>
+    <string name="wear_privacy_rationale">بإذنك، تقرأ هذه الميزة التجريبية النبض وضغط الدم من Health Connect فقط عندما تطلب البحث عن البيانات. وتعرض السجلات المحددة بأنها من ساعة. لا تُحفظ قراءة الضغط على هذا الهاتف إلا بعد تأكيدك، ويمكنك حذفها أو تصديرها لاحقاً. لا حسابات ولا مزامنة تلقائية ولا إرسال إلى خوادمنا. يظل الإدخال اليدوي متاحاً دون منح الإذن.</string>
+</resources>

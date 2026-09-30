@@ -39,6 +39,7 @@ import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.*
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.*
 import androidx.compose.ui.unit.dp
@@ -129,10 +130,10 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
         }.onFailure { error = context.t("No se pudo exportar el archivo.") }
     } }
     val title = when(route) { "add" -> "Guardar nueva toma"; "more" -> "Cuida tu rutina"; "guide" -> "Guía y privacidad"
-        "reminders" -> "Alertas"; "import" -> "Importar registros de Excel"; else -> homeTitle }
+        "reminders" -> "Alertas"; "import" -> "Importar registros de Excel"; "wear" -> "Reloj · Beta"; else -> homeTitle }
     Scaffold(topBar = { TopAppBar(title = { Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
         if (route == "home") Image(painterResource(R.drawable.pineapple_mark), null, Modifier.size(36.dp))
-        Text(tx(title), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        Text(if(route == "wear") stringResource(R.string.wear_beta_badge) else tx(title), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
     } }, navigationIcon = { if(route != "home") IconButton(onClick = { route = "home" }) { Icon(Icons.AutoMirrored.Filled.ArrowBack, tx("Cerrar")) } },
         actions = { if(route == "home") { IconButton(onClick = { route = "reminders" }) { Icon(Icons.Default.Notifications, tx("Alertas")) }
             IconButton(onClick = { route = "more" }) { Icon(Icons.Default.MoreVert, tx("Más")) } } }) },
@@ -148,17 +149,20 @@ private fun LocalDate.title() = format(DateTimeFormatter.ofLocalizedDate(FormatS
                     try { context.store.add(rows); Reminders.reconcile(context); route = "home"; null }
                     catch (e: Exception) { context.t("No se pudo guardar la toma en este iPhone. Inténtalo de nuevo.") }
                 }
-                "more" -> Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                "more" -> Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp),
+                    verticalArrangement = Arrangement.spacedBy(14.dp)) {
                     Text(tx("Guía, avisos y tus datos, en un solo lugar."), style = MaterialTheme.typography.bodyLarge)
                     Tool("Alertas", Icons.Default.Notifications) { route = "reminders" }
                     Tool("Guía y privacidad", Icons.Default.Info) { route = "guide" }
                     Tool("Exportar a Excel", Icons.Default.Share) { share(true) }
                     Tool("Importar registros de Excel", Icons.Default.Add) { route = "import" }
+                    Tool(stringResource(R.string.wear_beta_badge), Icons.Default.Info) { route = "wear" }
                     Text(tx("La copia contiene datos de salud. Guárdala en un lugar privado y compártela solo con personas de confianza."))
                 }
                 "guide" -> Guide()
                 "reminders" -> ReminderSettings()
                 "import" -> ImportInstructions { launcher.launch(arrayOf("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")) }
+                "wear" -> WearBetaScreen()
             }
         }
     }

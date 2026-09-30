@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">Reloj · Beta</string>
+    <string name="wear_intro">Prueba de conectividad con relojes Wear OS. Puedes consultar el pulso que el reloj haya compartido y revisar lecturas de presión disponibles antes de guardarlas.</string>
+    <string name="wear_no_estimate">El pulso no permite calcular una tensión arterial fiable. No generamos cifras de presión a partir de sensores sin una medición existente.</string>
+    <string name="wear_requirements">Solo se muestran registros marcados como procedentes de un reloj en Health Connect. La disponibilidad depende del reloj, sus aplicaciones y tus permisos.</string>
+    <string name="wear_connect">Conectar y buscar datos</string>
+    <string name="wear_error">No se pudo leer Health Connect. Revisa la conexión y los permisos.</string>
+    <string name="wear_permission_denied">No se concedieron permisos. El registro manual sigue disponible.</string>
+    <string name="wear_unavailable">Health Connect no está disponible o necesita instalarse o actualizarse.</string>
+    <string name="wear_pulse_title">Último pulso del reloj</string>
+    <string name="wear_no_pulse">No hay pulso de reloj disponible.</string>
+    <string name="wear_bp_title">Presión registrada por el reloj</string>
+    <string name="wear_no_bp">No hay mediciones de presión identificadas como procedentes de un reloj. Puedes seguir guardando tomas manualmente.</string>
+    <string name="wear_save">Guardar esta toma</string>
+    <string name="wear_confirm_title">¿Guardar lectura del reloj?</string>
+    <string name="wear_confirm_body">Se añadirá %1$d / %2$d mmHg al histórico local. Comprueba que corresponde a tu medición. No sustituye un tensiómetro validado.</string>
+    <string name="wear_duplicate">Esta lectura ya estaba guardada.</string>
+    <string name="wear_saved">Lectura guardada en el móvil.</string>
+    <string name="wear_manual">El registro manual permanece disponible. Esta función beta no se sincroniza automáticamente ni comparte datos con nuestros servidores.</string>
+    <string name="wear_privacy_rationale">Con tu permiso, esta beta lee pulso y presión de Health Connect solo cuando pulsas buscar datos. Muestra registros identificados como procedentes de un reloj. Únicamente se guarda en este móvil una lectura de presión cuando la confirmas; puedes eliminarla o exportarla después. Sin cuentas, sincronización automática ni envío a servidores propios. Puedes seguir usando el registro manual sin conceder acceso.</string>
+</resources>

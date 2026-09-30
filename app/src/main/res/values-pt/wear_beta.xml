@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">Relógio · Beta</string>
+    <string name="wear_intro">Teste de ligação a relógios Wear OS. Veja a pulsação partilhada e confirme medições de tensão antes de guardar.</string>
+    <string name="wear_no_estimate">A pulsação isolada não permite calcular a tensão de forma fiável. Não geramos valores de tensão sem uma medição existente.</string>
+    <string name="wear_requirements">Só são apresentados registos do Health Connect identificados como vindos de um relógio. A disponibilidade depende do relógio, aplicações e permissões.</string>
+    <string name="wear_connect">Ligar e procurar</string>
+    <string name="wear_error">Não foi possível ler o Health Connect. Verifique ligação e permissões.</string>
+    <string name="wear_permission_denied">Permissões não concedidas. O registo manual continua disponível.</string>
+    <string name="wear_unavailable">Health Connect indisponível ou precisa de instalação/atualização.</string>
+    <string name="wear_pulse_title">Última pulsação do relógio</string>
+    <string name="wear_no_pulse">Sem pulsação do relógio.</string>
+    <string name="wear_bp_title">Tensão registada pelo relógio</string>
+    <string name="wear_no_bp">Sem medições de tensão identificadas como vindas de um relógio. Pode continuar a registar manualmente.</string>
+    <string name="wear_save">Guardar esta medição</string>
+    <string name="wear_confirm_title">Guardar medição do relógio?</string>
+    <string name="wear_confirm_body">%1$d / %2$d mmHg será adicionado ao histórico local. Confirme a medição. Não substitui um medidor validado.</string>
+    <string name="wear_duplicate">Medição já guardada.</string>
+    <string name="wear_saved">Medição guardada no dispositivo.</string>
+    <string name="wear_manual">O registo manual continua disponível. Esta beta não sincroniza automaticamente.</string>
+    <string name="wear_privacy_rationale">Com a tua autorização, esta beta lê pulso e tensão no Health Connect apenas quando procuras dados. Mostra registos identificados como provenientes de um relógio. Uma leitura da tensão só é guardada neste telemóvel após confirmação; podes depois eliminá-la ou exportá-la. Sem contas, sincronização automática ou envio para os nossos servidores. O registo manual funciona sem conceder acesso.</string>
+</resources>

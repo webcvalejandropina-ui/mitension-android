@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">Orologio · Beta</string>
+    <string name="wear_intro">Prova di connessione con orologi Wear OS. Visualizza il battito condiviso e controlla le misurazioni disponibili prima di salvarle.</string>
+    <string name="wear_no_estimate">Il battito da solo non permette di calcolare la pressione in modo affidabile. Non generiamo valori senza una misurazione esistente.</string>
+    <string name="wear_requirements">Sono mostrati solo i dati di Health Connect identificati come provenienti da un orologio. La disponibilità dipende da orologio, app e permessi.</string>
+    <string name="wear_connect">Connetti e cerca</string>
+    <string name="wear_error">Impossibile leggere Health Connect. Controlla connessione e permessi.</string>
+    <string name="wear_permission_denied">Permessi non concessi. L’inserimento manuale resta disponibile.</string>
+    <string name="wear_unavailable">Health Connect non è disponibile o richiede installazione o aggiornamento.</string>
+    <string name="wear_pulse_title">Ultimo battito dell’orologio</string>
+    <string name="wear_no_pulse">Nessun battito disponibile.</string>
+    <string name="wear_bp_title">Pressione registrata dall’orologio</string>
+    <string name="wear_no_bp">Nessuna misurazione identificata come proveniente da un orologio. Puoi continuare a inserirle manualmente.</string>
+    <string name="wear_save">Salva misurazione</string>
+    <string name="wear_confirm_title">Salvare la misurazione?</string>
+    <string name="wear_confirm_body">%1$d / %2$d mmHg verrà aggiunto allo storico locale. Verifica la misura. Non sostituisce un misuratore validato.</string>
+    <string name="wear_duplicate">Misurazione già salvata.</string>
+    <string name="wear_saved">Misurazione salvata sul dispositivo.</string>
+    <string name="wear_manual">L’inserimento manuale resta disponibile. Questa beta non sincronizza automaticamente.</string>
+    <string name="wear_privacy_rationale">Con il tuo permesso, questa beta legge frequenza cardiaca e pressione da Health Connect solo quando avvii la ricerca. Mostra i dati identificati come provenienti da un orologio. Una lettura della pressione viene salvata su questo telefono solo dopo la tua conferma; puoi poi eliminarla o esportarla. Nessun account, sincronizzazione automatica o invio ai nostri server. L’inserimento manuale funziona senza concedere accesso.</string>
+</resources>

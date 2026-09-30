@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">Rellotge · Beta</string>
+    <string name="wear_intro">Prova de connexió amb rellotges Wear OS. Consulta el pols compartit i revisa les mesures de tensió abans de desar-les.</string>
+    <string name="wear_no_estimate">El pols tot sol no permet calcular la tensió de manera fiable. No generem xifres sense una mesura existent.</string>
+    <string name="wear_requirements">Només es mostren dades de Health Connect identificades com a procedents d’un rellotge. La disponibilitat depèn del rellotge, les apps i els permisos.</string>
+    <string name="wear_connect">Connecta i cerca</string>
+    <string name="wear_error">No s’ha pogut llegir Health Connect. Revisa la connexió i els permisos.</string>
+    <string name="wear_permission_denied">Permisos denegats. L’entrada manual continua disponible.</string>
+    <string name="wear_unavailable">Health Connect no està disponible o necessita instal·lació o actualització.</string>
+    <string name="wear_pulse_title">Últim pols del rellotge</string>
+    <string name="wear_no_pulse">No hi ha pols disponible.</string>
+    <string name="wear_bp_title">Tensió registrada pel rellotge</string>
+    <string name="wear_no_bp">No hi ha mesures de tensió identificades com a procedents d’un rellotge. Pots continuar entrant-les manualment.</string>
+    <string name="wear_save">Desa aquesta mesura</string>
+    <string name="wear_confirm_title">Desar la mesura del rellotge?</string>
+    <string name="wear_confirm_body">S’afegirà %1$d / %2$d mmHg a l’historial local. Comprova la mesura. No substitueix un tensiòmetre validat.</string>
+    <string name="wear_duplicate">Mesura ja desada.</string>
+    <string name="wear_saved">Mesura desada al mòbil.</string>
+    <string name="wear_manual">L’entrada manual continua disponible. Aquesta beta no sincronitza automàticament.</string>
+    <string name="wear_privacy_rationale">Amb el teu permís, aquesta beta llegeix el pols i la pressió de Health Connect només quan demanes cercar dades. Mostra registres identificats com a procedents d’un rellotge. Una lectura de pressió només es desa en aquest mòbil després de confirmar-la; després la pots eliminar o exportar. Sense comptes, sincronització automàtica ni enviament als nostres servidors. El registre manual funciona sense concedir accés.</string>
+</resources>

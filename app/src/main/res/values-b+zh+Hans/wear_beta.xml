@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">手表 · 测试版</string>
+    <string name="wear_intro">测试与 Wear OS 手表的连接。查看手表共享的心率，并在保存血压记录前核对数据。</string>
+    <string name="wear_no_estimate">仅凭心率无法可靠计算血压。没有现成测量记录时，本应用不会根据传感器生成血压数值。</string>
+    <string name="wear_requirements">仅显示 Health Connect 中标记为来自手表的记录。可用性取决于手表、应用和权限。</string>
+    <string name="wear_connect">连接并查找数据</string>
+    <string name="wear_error">无法读取 Health Connect。请检查连接和权限。</string>
+    <string name="wear_permission_denied">未授予权限。仍可手动录入。</string>
+    <string name="wear_unavailable">Health Connect 不可用，或需要安装或更新。</string>
+    <string name="wear_pulse_title">最近的手表心率</string>
+    <string name="wear_no_pulse">没有可用的手表心率。</string>
+    <string name="wear_bp_title">手表记录的血压</string>
+    <string name="wear_no_bp">没有标记为来自手表的血压记录。仍可手动录入。</string>
+    <string name="wear_save">保存此记录</string>
+    <string name="wear_confirm_title">保存手表记录？</string>
+    <string name="wear_confirm_body">将 %1$d / %2$d mmHg 添加到本地历史。请核对测量结果；这不能替代经过验证的血压计。</string>
+    <string name="wear_duplicate">此记录已保存。</string>
+    <string name="wear_saved">记录已保存在设备上。</string>
+    <string name="wear_manual">手动录入仍可使用。此测试功能不会自动同步，也不会向我们的服务器共享数据。</string>
+    <string name="wear_privacy_rationale">经你授权后，本测试功能仅在你主动搜索时从 Health Connect 读取心率和血压。它只显示标记为来自手表的记录。血压读数只有在你确认后才会保存到本机，之后可以删除或导出。无需账户，不会自动同步，也不会发送到我们的服务器。不授权也可以继续手动记录。</string>
+</resources>

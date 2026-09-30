@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">Montre · Bêta</string>
+    <string name="wear_intro">Essai de connexion aux montres Wear OS. Consultez le pouls partagé et vérifiez les mesures de tension avant de les enregistrer.</string>
+    <string name="wear_no_estimate">Le pouls seul ne permet pas de calculer la tension de façon fiable. Aucune tension n’est déduite des capteurs sans mesure existante.</string>
+    <string name="wear_requirements">Seules les données Health Connect identifiées comme provenant d’une montre sont affichées. Leur disponibilité dépend des applications et autorisations.</string>
+    <string name="wear_connect">Connecter et rechercher</string>
+    <string name="wear_error">Lecture de Health Connect impossible. Vérifiez la connexion et les autorisations.</string>
+    <string name="wear_permission_denied">Autorisations refusées. La saisie manuelle reste disponible.</string>
+    <string name="wear_unavailable">Health Connect est indisponible ou nécessite une installation ou mise à jour.</string>
+    <string name="wear_pulse_title">Dernier pouls de la montre</string>
+    <string name="wear_no_pulse">Aucun pouls disponible.</string>
+    <string name="wear_bp_title">Tension enregistrée par la montre</string>
+    <string name="wear_no_bp">Aucune mesure de tension provenant d’une montre. La saisie manuelle reste possible.</string>
+    <string name="wear_save">Enregistrer cette mesure</string>
+    <string name="wear_confirm_title">Enregistrer la mesure ?</string>
+    <string name="wear_confirm_body">%1$d / %2$d mmHg sera ajouté à l’historique local. Vérifiez la mesure. Cela ne remplace pas un tensiomètre validé.</string>
+    <string name="wear_duplicate">Mesure déjà enregistrée.</string>
+    <string name="wear_saved">Mesure enregistrée sur le mobile.</string>
+    <string name="wear_manual">La saisie manuelle reste disponible. Cette bêta ne synchronise pas automatiquement les données.</string>
+    <string name="wear_privacy_rationale">Avec votre accord, cette bêta lit le pouls et la tension dans Health Connect uniquement lorsque vous lancez la recherche. Elle affiche les données identifiées comme provenant d’une montre. Une mesure de tension n’est enregistrée sur ce téléphone qu’après votre confirmation ; vous pouvez ensuite la supprimer ou l’exporter. Aucun compte, aucune synchronisation automatique et aucun envoi à nos serveurs. La saisie manuelle fonctionne sans cet accès.</string>
+</resources>

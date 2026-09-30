@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">Uhr · Beta</string>
+    <string name="wear_intro">Verbindungstest für Wear-OS-Uhren. Sieh dir Pulsdaten und vorhandene Blutdruckwerte vor dem Speichern an.</string>
+    <string name="wear_no_estimate">Aus dem Puls allein lässt sich Blutdruck nicht zuverlässig berechnen. Ohne vorhandene Messung erzeugen wir keine Blutdruckwerte.</string>
+    <string name="wear_requirements">Nur in Health Connect als Uhrdaten gekennzeichnete Einträge werden angezeigt. Verfügbarkeit hängt von Uhr, Apps und Berechtigungen ab.</string>
+    <string name="wear_connect">Verbinden und suchen</string>
+    <string name="wear_error">Health Connect konnte nicht gelesen werden. Verbindung und Berechtigungen prüfen.</string>
+    <string name="wear_permission_denied">Berechtigungen fehlen. Manuelle Eingabe bleibt möglich.</string>
+    <string name="wear_unavailable">Health Connect ist nicht verfügbar oder muss installiert bzw. aktualisiert werden.</string>
+    <string name="wear_pulse_title">Letzter Puls der Uhr</string>
+    <string name="wear_no_pulse">Kein Uhrenpuls verfügbar.</string>
+    <string name="wear_bp_title">Blutdruck der Uhr</string>
+    <string name="wear_no_bp">Keine als Uhrdaten gekennzeichneten Blutdruckwerte. Manuelle Eingabe ist weiter möglich.</string>
+    <string name="wear_save">Messung speichern</string>
+    <string name="wear_confirm_title">Uhrenmessung speichern?</string>
+    <string name="wear_confirm_body">%1$d / %2$d mmHg wird lokal gespeichert. Prüfe die Messung. Ein validiertes Blutdruckmessgerät wird dadurch nicht ersetzt.</string>
+    <string name="wear_duplicate">Messung bereits gespeichert.</string>
+    <string name="wear_saved">Messung lokal gespeichert.</string>
+    <string name="wear_manual">Manuelle Eingabe bleibt verfügbar. Diese Beta synchronisiert nicht automatisch.</string>
+    <string name="wear_privacy_rationale">Mit deiner Erlaubnis liest diese Beta Puls und Blutdruck aus Health Connect nur, wenn du die Suche startest. Sie zeigt als Uhrendaten gekennzeichnete Einträge. Ein Blutdruckwert wird erst nach deiner Bestätigung auf diesem Gerät gespeichert; du kannst ihn später löschen oder exportieren. Keine Konten, keine automatische Synchronisierung und keine Übertragung an eigene Server. Die manuelle Eingabe funktioniert ohne diese Berechtigung.</string>
+</resources>

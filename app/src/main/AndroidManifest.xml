@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Local-only diary: deliberately no INTERNET, camera or health-data permissions. -->
+    <!-- Health Connect beta reads only with explicit consent; no Internet, camera or location. -->
+    <uses-permission android:name="android.permission.health.READ_HEART_RATE" />
+    <uses-permission android:name="android.permission.health.READ_BLOOD_PRESSURE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <!-- Android 13 and earlier discover the separate Health Connect provider through package visibility. -->
+    <queries><package android:name="com.google.android.apps.healthdata" /></queries>
     <application android:name=".TensionApplication" android:label="@string/app_name" android:icon="@drawable/app_icon"
         android:theme="@style/AppTheme" android:allowBackup="false" android:supportsRtl="true"
         android:fullBackupContent="@xml/backup_rules" android:dataExtractionRules="@xml/data_extraction_rules">
@@ -15,6 +19,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PermissionsRationaleActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="androidx.health.ACTION_SHOW_PERMISSIONS_RATIONALE" />
+            </intent-filter>
+        </activity>
+        <!-- Android 14+ links to the same local privacy explanation from Health Connect settings. -->
+        <activity-alias android:name=".ViewPermissionUsageActivity" android:exported="true"
+            android:targetActivity=".PermissionsRationaleActivity"
+            android:permission="android.permission.START_VIEW_PERMISSION_USAGE">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE" />
+                <category android:name="android.intent.category.HEALTH_PERMISSIONS" />
+            </intent-filter>
+        </activity-alias>
         <receiver android:name=".reminders.ReminderReceiver" android:exported="false" />
         <service android:name=".reminders.AlarmSoundService" android:exported="false" android:foregroundServiceType="mediaPlayback" />
         <receiver android:name=".reminders.RestoreReceiver" android:exported="true">

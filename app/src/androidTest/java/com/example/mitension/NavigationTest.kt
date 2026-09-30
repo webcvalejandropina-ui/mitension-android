@@ -40,4 +40,13 @@ class NavigationTest {
         // Pager may retain the adjacent summary's filter in its composition.
         compose.onAllNodesWithText(context.t("7 días")).onFirst().assertExists()
     }
+    @Test fun watchBetaDoesNotReplaceManualEntry() {
+        val context = compose.activity
+        compose.onNodeWithContentDescription(context.t("Más")).performClick()
+        compose.onNodeWithText(context.getString(R.string.wear_beta_badge)).performClick()
+        compose.onNodeWithText(context.getString(R.string.wear_no_estimate)).assertExists()
+        compose.onNodeWithContentDescription(context.t("Cerrar")).performClick()
+        compose.onNodeWithText(context.t("Guardar nueva toma")).performClick()
+        compose.onNodeWithText(context.t("Sistólica")).assertExists()
+    }
 }

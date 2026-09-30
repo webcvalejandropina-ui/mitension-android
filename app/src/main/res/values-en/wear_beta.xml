@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">Watch · Beta</string>
+    <string name="wear_intro">Connectivity trial for Wear OS watches. View pulse data shared by your watch and review available blood-pressure readings before saving.</string>
+    <string name="wear_no_estimate">Pulse alone cannot reliably calculate blood pressure. We do not generate pressure numbers from sensors without an existing measurement.</string>
+    <string name="wear_requirements">Only Health Connect records identified as coming from a watch are shown. Availability depends on your watch, apps and permissions.</string>
+    <string name="wear_connect">Connect and find data</string>
+    <string name="wear_error">Could not read Health Connect. Check connection and permissions.</string>
+    <string name="wear_permission_denied">Permissions were not granted. Manual entry remains available.</string>
+    <string name="wear_unavailable">Health Connect is unavailable or needs installation or an update.</string>
+    <string name="wear_pulse_title">Latest watch pulse</string>
+    <string name="wear_no_pulse">No watch pulse available.</string>
+    <string name="wear_bp_title">Blood pressure recorded by watch</string>
+    <string name="wear_no_bp">No blood-pressure readings identified as coming from a watch. You can still enter readings manually.</string>
+    <string name="wear_save">Save this reading</string>
+    <string name="wear_confirm_title">Save watch reading?</string>
+    <string name="wear_confirm_body">%1$d / %2$d mmHg will be added to local history. Check that it matches your measurement. It does not replace a validated cuff.</string>
+    <string name="wear_duplicate">This reading was already saved.</string>
+    <string name="wear_saved">Reading saved on this device.</string>
+    <string name="wear_manual">Manual entry remains available. This beta does not sync automatically or share data with our servers.</string>
+    <string name="wear_privacy_rationale">With your permission, this beta reads heart rate and blood pressure from Health Connect only when you ask it to find data. It shows records identified as coming from a watch. A pressure reading is saved on this device only after you confirm it; you can later delete or export it. No accounts, automatic sync or transfer to our servers. Manual entry works without granting access.</string>
+</resources>

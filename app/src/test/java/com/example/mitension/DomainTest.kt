@@ -10,6 +10,18 @@ import java.io.*
 
 /** Synthetic fixtures only. These tests do not touch phone files, permissions, or real alarms. */
 class DomainTest {
+    @Test fun watchImportUsesStableIdentityWithoutTouchingManualReadings() {
+        assertTrue(isWatchDevice(1))
+        assertFalse(isWatchDevice(2))
+        assertFalse(isWatchDevice(null))
+        val source = WatchPressure("source-42", 124, 78, 1_600_000_000_000L, "watch.provider")
+        val first = source.toReading()
+        assertTrue(first.valid())
+        assertEquals(first.id, source.toReading().id)
+        assertNotEquals(first.id, source.copy(sourceId = "source-43").toReading().id)
+        assertNotEquals(first.id, source.copy(origin = "other.provider").toReading().id)
+        assertNull(first.pulse)
+    }
     @Test fun rollingPeriodMatchesIPhoneAtCutoffAndAcrossDaylightSaving() {
         val madrid = ZoneId.of("Europe/Madrid")
         val now = ZonedDateTime.of(2026, 10, 27, 10, 30, 0, 0, madrid).toInstant()

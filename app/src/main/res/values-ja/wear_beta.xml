@@ -1,0 +1,21 @@
+<resources>
+    <string name="wear_beta_badge">時計 · ベータ</string>
+    <string name="wear_intro">Wear OS 時計との接続テストです。共有された脈拍を表示し、血圧記録を確認してから保存できます。</string>
+    <string name="wear_no_estimate">脈拍だけから血圧を正確に計算することはできません。既存の測定値がない場合、血圧値を生成しません。</string>
+    <string name="wear_requirements">Health Connect で時計由来と識別された記録のみ表示します。利用可否は時計、アプリ、権限によります。</string>
+    <string name="wear_connect">接続して検索</string>
+    <string name="wear_error">Health Connect を読み取れません。接続と権限を確認してください。</string>
+    <string name="wear_permission_denied">権限がありません。手入力は引き続き利用できます。</string>
+    <string name="wear_unavailable">Health Connect が利用できないか、インストールまたは更新が必要です。</string>
+    <string name="wear_pulse_title">最新の時計の脈拍</string>
+    <string name="wear_no_pulse">時計の脈拍はありません。</string>
+    <string name="wear_bp_title">時計で記録した血圧</string>
+    <string name="wear_no_bp">時計由来の血圧記録はありません。手入力は引き続き利用できます。</string>
+    <string name="wear_save">この記録を保存</string>
+    <string name="wear_confirm_title">時計の記録を保存しますか？</string>
+    <string name="wear_confirm_body">%1$d / %2$d mmHg を端末内の履歴に追加します。測定値を確認してください。認証済み血圧計の代わりにはなりません。</string>
+    <string name="wear_duplicate">すでに保存されています。</string>
+    <string name="wear_saved">端末に保存しました。</string>
+    <string name="wear_manual">手入力は引き続き利用できます。このベータ版は自動同期しません。</string>
+    <string name="wear_privacy_rationale">許可した場合に限り、このベータ機能は検索を実行したときだけ Health Connect から心拍数と血圧を読み取ります。時計由来と識別された記録のみ表示します。血圧は確認後にのみこの端末へ保存され、後で削除・エクスポートできます。アカウント、自動同期、当社サーバーへの送信はありません。許可しなくても手入力は使えます。</string>
+</resources>
